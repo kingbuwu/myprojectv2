@@ -1,0 +1,214 @@
+/*禁止选中文本*/
+*.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+.reset-table{
+    border-collapse: collapse;
+}
+.main-acticle:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.main-acticle-title{
+	text-align: center;
+	padding: 20px 0;
+}
+/*左侧菜单栏*/
+.main-acticle-menu{
+	position: relative;
+	float: left;
+	width: 135px;
+	margin-right: 10px;
+	border: 1px solid #cde2f6;
+    border-right: 1px solid #4393df;
+    border-bottom: 1px solid #4393df;
+    font-size: smaller;
+}
+.main-acticle-menu .main-acticle-menutop{
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    font-size: medium;
+    text-align: center;
+    color: #fff;
+}
+.main-acticle-menu .main-acticle-menutopbg{
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-top: 20px solid #479cee;
+	border-right: 67.5px solid #479cee;
+	border-bottom: 20px solid #378cdd;
+	border-left: 67.5px solid #378cdd;
+	z-index: -1;
+}
+.main-acticle-menu ul{
+	list-style: none;
+	padding: 5px 0;
+}
+.main-acticle-menu ul:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.main-acticle-menu li{
+	list-style: none;
+	position: relative;
+    float: left;
+    border: 1px solid #b5dbff;
+    width: 93px;
+    padding: 2px 10px;
+    margin: 5px 10px;
+    text-align: center;
+    font-size: 10px;
+    color: #378cdd;
+    cursor: pointer;
+}
+.main-acticle-menu li:after{
+	position: absolute;
+	display: inline-block;
+	content: ">";
+	right: 5px;
+}
+.main-acticle-menu li.active,.main-acticle-menu li:hover{
+	color: white;
+	background-color: #378cdd;
+}
+.main-acticle-right{
+	float: left;
+	width: 610px;
+}
+.main-acticle-body{
+	position: relative;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+.main-acticle-text>p{
+	padding: 5px 20px;
+    font-size: 12px;
+    border-bottom: 1px solid #b5dbff;
+    height: 25px;
+    line-height: 25px;
+    color: #717171;
+}
+.main-acticle-text>p:last-child{
+	border-bottom: 0;
+}
+.main-acticle-text>p:after{
+	border: 0;
+}
+.acticle-sub-title{
+	position: relative;
+    overflow: hidden;
+    background-color: #bfe3fd;
+    padding-bottom: 2px;
+}
+.acticle-sub-titlebg{
+	float: left;
+	border-left: 15px solid #3b96ef;
+	border-top: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+}
+.acticle-sub-titleline{
+	position: absolute;
+	bottom: 0;
+	height: 1px;
+	background-color: #3b96ef;
+	width: 100%;
+	border-top: 1px solid #3b96ef;
+	border-bottom: 1px solid #3b96ef;
+}
+.acticle-sub-title-txt{
+	background-color: #3b96ef;
+	float: left;
+	padding: 8px 20px;
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+}
+.acticle-sub-title-more{
+	float: right;
+	height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #388fe3;
+    font-size: 12px;
+}
+.acticle-sub-title-more:after{
+	display: inline-block;
+	content: ">";
+}
+.main-acticle-text ul,.main-acticle-text li{
+	list-style: none;
+	padding: 3px;
+	font-size: 12px;
+	color: #6d7173;
+}
+.main-acticle-text li:after{
+	display: block;
+	content: "";
+	height: 0;
+	clear: both;
+}
+.main-acticle-text .text:before{
+	display: inline-block;
+	content: "";
+	background: url(../img/li1.png);
+	font-size: 20px;
+	width: 16px;
+    height: 16px;
+    vertical-align: bottom;
+    background-size: contain;
+}
+.main-acticle-text li>.text{
+	float: left;
+	cursor: pointer;
+}
+.main-acticle-text li>.time{
+	float: right;
+}
+.picsarr{
+	position: relative;
+}
+.picsarr .num{
+	display: inline-block;
+	background-color: #434343;
+	color: white;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	margin-left: 2px;
+	cursor: pointer;
+}
+.picsarr li{
+	display: none;
+}
+.picsarr li.active{
+	display: block;
+}
+
+/*自定义样式*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear:after{
+	display: block;
+	content: "";
+	clear: both;
+}

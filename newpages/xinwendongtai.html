@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>新闻动态</title>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/pagelist.css"/>
+		<style>
+			.main-acticle-text li div{
+				float:left;
+			}
+			.main-acticle-text ul, .main-acticle-text li{
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main-login-top">
+	            <!-- <a  style="float: left;">个人中心</a> -->
+	            <a href="./registerpage1.html">注册</a>
+	            <a id="mainLogina" href="javascript:showLoginBox();">登录</a>
+	        </div>
+	        <div class="main-login-top-two"></div>
+	        <div class="main-top">
+	            <div><img src="img/top.png" alt="竞争力" /></div>
+	        </div>
+			<div class="main-title">
+				<ul>
+					<li onclick="goToUrl('index')">首页</li>
+	                <li class="active" onclick="goToUrl('xinwendongtai')">新闻动态</li>
+	                <li onclick="goToUrl('zhengcefagui')">政策法规</li>
+	                <li onclick="goToUrl('yuanqufengcai')">园区风采</li>
+	                <li onclick="goToUrl('pagelist')">知识产权服务</li>
+	                <li onclick="goToUrl('guojihezuo')">国际合作</li>
+	                <li onclick="goToUrl('zhonghefuwu')">综合服务</li>
+	                <li onclick="goToUrl('lianxiwomen')">联系我们</li>
+				</ul>
+			</div>
+			<div class="main-body">
+				<div class="main-sub-title">
+					<i class="icon icon-addr"></i>
+					<span>当前位置:</span>
+					<span class="main-sub-addr">首页</span>
+					<span class="main-sub-addr">新闻动态</span>
+				</div>
+				<div class="main-sub-body">
+					<div class="main-acticle">
+						<div class="main-acticle-menu">
+							<div class="main-acticle-menutop">新闻动态</div>
+							<div class="main-acticle-menutopbg"></div>
+							<ul>
+								<li id="menu_tzgg" class="active">通知公告</li>
+								<li id="menu_zscq">知识产权动态</li>
+							</ul>
+						</div>
+						<div class="main-acticle-right main_right_tzgg"></div>
+						<div class="main-acticle-right main_right_zscq"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--下面是所有的doT模板 author@ctj -->
+		<!--tzgg 通知公告-->
+		<script id="template_tzgg" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">通知公告</div>
+					<div class="acticle-sub-titlebg"></div>
+					<div class="acticle-sub-titleline" style="position: absolute; bottom: 0; height: 1px; background-color: #3b96ef; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef;"></div>
+				</div>
+				<div class="main-acticle-text">
+					<ul>
+						{{? it.length > 0 }}
+							{{~it: article : i}}
+							<li>
+								<div class="text" onclick="toShowArticle('{{= article.objId }}')">{{= article.name }}</div>
+								<div class="time">{{= article.createTime }}</div>
+							</li>
+							{{~}}
+						{{??}}
+							<li>
+								<div class="text">暂无相关信息</div>
+							</li>
+						{{?}}
+						<li>
+							<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+								<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</script>
+
+		<!--zscq 知识产权动态-->
+		<script id="template_zscq" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">知识产权动态</div>
+					<div class="acticle-sub-titlebg"></div>
+					<div class="acticle-sub-titleline" style="position: absolute; bottom: 0; height: 1px; background-color: #3b96ef; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef;"></div>
+				</div>
+				<div class="main-acticle-text">
+					<ul>
+						{{? it.length > 0 }}
+							{{~it: article : i}}
+							<li>
+								<div><img src="{{= article.image }}" alt="" style="width: 240px; height: 160px;"/></div>
+								<div style="padding: 5px 0 5px 10px; width: 315px;">
+									<h3>{{= article.name }}</h3>
+									<p style="line-height: 22px;">{{= article.introduction }}</p>
+								</div>
+							</li>
+							{{~}}
+						{{??}}
+							<li>
+								<div class="text">暂无相关信息</div>
+							</li>
+						{{?}}
+						<li>
+							<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+								<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</script>
+
+		<script src="js/jquery-3.2.0.min.js"></script>
+		<script src="js/doT.js"></script>
+		<script src="js/comment.js"></script>
+		<script src="js/xinwendongtai.js"></script>
+	</body>
+</html>

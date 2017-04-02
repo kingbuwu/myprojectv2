@@ -1,0 +1,156 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.clear:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.main{
+	width: 1200px;
+	margin: 0 auto;
+}
+.main-body,.main-top{
+	width: 800px;
+	margin: 0 auto;
+}
+.main-top{
+	font-size: 0;
+}
+.main-top img{
+	width: 100%;
+}
+.main-body{
+	box-shadow: 3px -2px 10px -2px #b9dbfb,-3px 0px 10px -2px #b9dbfb;
+	padding-bottom: 10px;
+}
+.main-title{
+	height: 50px;
+	background: -webkit-linear-gradient(to bottom, #62b2ff , #036ed8); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(to bottom, #62b2ff , #036ed8); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(to bottom, #62b2ff , #036ed8); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #62b2ff , #036ed8);
+}
+.main-title ul{
+	list-style: none;
+	width: 630px;
+	margin: 0 auto;
+}
+.main-title ul:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.main-title li{
+	list-style: none;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    padding: 0 11px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.main-title li:hover,.main-title li.active{
+	background-color: #77b9f9;
+}
+.main-sub-title{
+	font-size: 10.8px;
+    padding: 15px 20px 0;
+    color: #696a6a;
+    -webkit-transform-origin-x: 0;
+    -webkit-transform: scale(0.90);
+}
+.main-sub-body{
+	margin: 20px;
+}
+.icon{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: sub;
+}
+.icon-addr{
+	background: url(../img/addr.png);
+}
+.main-sub-addr:last-child{
+	color: dodgerblue;
+}
+.main-sub-addr:after{
+	display: inline;
+	padding-left: 10px;
+	content: ">";
+}
+.main-sub-addr:last-child:after{
+	display: inline;
+	content: "";
+}
+
+/*翻页样式*/
+.page-bar{
+	display: none;
+    margin-left: 50%;
+}
+.page-bar>ul{
+	list-style: none;
+    margin-left: -50%;
+}
+.page-bar>ul:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.page-bar>ul>li{
+	list-style: none;
+    float: left;
+    line-height: 10px;
+    padding: 5px 5px;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #4295e6;
+}
+.page-bar>ul>li:hover,.page-bar>ul>li.active{
+    box-shadow: -1px -1px 1px 1px #ccc;
+}
+
+.top-tap{
+	background-color: #77b9f9;
+}
+
+/*新增顶部页面注册样式*/
+.main-login-top{
+    text-align: right;
+    font-size: 16px;
+    width: 1200px;
+    height: 30px;
+    background-color: #020202;
+
+}
+.main-login-top a{
+     color: #FFFFFF;
+     text-decoration: none;
+     line-height: 30px;
+}
+.main-login-top-two{
+    text-align: right;
+    font-size: 16px;
+    width: 1198px;
+    height: 15px;
+     background-color: #f9f9f9;
+     border: 1px solid #dedede;
+}
+.main-login-top a:nth-child(1){
+    display: inline-block;
+    margin-left: 20px;
+}
+.main-login-top a:nth-child(2){
+    display: inline-block;
+    margin-right: 20px;
+}
+.main-login-top a:last-of-type{
+    display: inline-block;
+    margin-right: 20px;
+}

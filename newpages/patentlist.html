@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>知识产权服务</title>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/pagelist.css"/>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main-login-top">
+	            <!-- <a  style="float: left;">个人中心</a> -->
+	            <a href="./registerpage1.html">注册</a>
+	            <a id="mainLogina" href="javascript:showLoginBox();">登录</a>
+	        </div>
+	        <div class="main-login-top-two"></div>
+	        <div class="main-top">
+	            <div><img src="img/top.png" alt="竞争力" /></div>
+	        </div>
+			<div class="main-title">
+				<ul>
+	                <li onclick="goToUrl('index')">首页</li>
+	                <li onclick="goToUrl('xinwendongtai')">新闻动态</li>
+	                <li onclick="goToUrl('zhengcefagui')">政策法规</li>
+	                <li onclick="goToUrl('yuanqufengcai')">园区风采</li>
+	                <li class="active" onclick="goToUrl('pagelist')">知识产权服务</li>
+	                <li onclick="goToUrl('guojihezuo')">国际合作</li>
+	                <li onclick="goToUrl('zhonghefuwu')">综合服务</li>
+	                <li onclick="goToUrl('lianxiwomen')">联系我们</li>
+				</ul>
+			</div>
+			<div class="main-body">
+				<div class="main-sub-title">
+					<i class="icon icon-addr"></i>
+					<span>当前位置:</span>
+					<span class="main-sub-addr">首页</span>
+					<span class="main-sub-addr">知识产权服务</span>
+					<span class="main-sub-addr">成果展示与交易</span>
+					<span class="main-sub-addr">专利产业化</span>
+				</div>
+				<div class="main-sub-body">
+					<div class="main-acticle">
+						<div class="main-acticle-menu">
+							<div class="main-acticle-menutop">专利产业化</div>
+							<div class="main-acticle-menutopbg"></div>
+							<ul>
+								<li id="menu_zljspg" class="active">专利技术评估</li>
+								<li id="menu_zljsfh">专利技术孵化</li>
+								<li id="menu_zljsrz">专利技术融资</li>
+							</ul>
+						</div>
+						<div class="main-acticle-right"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--下面是所有的doT模板 author@ctj -->
+		<!--zltswq 专利技术评估-->
+		<script id="template_zljspg" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<!--感觉box-shadow更好
+				<div style="box-shadow: 0 1px 4px 0px #3b96ef;border-radius: 3px;">
+					<div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">宣传培训</div>
+				</div>-->
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">专利技术评估</div>
+					<div class="acticle-sub-titlebg"></div>
+					<div class="acticle-sub-titleline" style="position: absolute; bottom: 0; height: 1px; background-color: #3b96ef; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef;"></div>
+				</div>
+				<div class="main-acticle-text">
+					{{? it.length > 0 }}
+						{{~it: article : i}}
+							<p style="cursor: pointer;" onclick="toShowArticle('{{= article.objId }}')">{{= article.createTime }}&nbsp;{{= article.name }}</p>
+						{{~}}
+					{{??}}
+						<p>暂无相关信息</p>
+					{{?}}
+				</div>
+				<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+					<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+				</div>
+			</div>
+			{{ console.log(it); }}
+		</script>
+		<!--zltswq 专利技术孵化-->
+		<script id="template_zljsfh" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">专利技术孵化</div>
+					<div class="acticle-sub-titlebg"></div>
+					<div class="acticle-sub-titleline" style="position: absolute; bottom: 0; height: 1px; background-color: #3b96ef; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef;"></div>
+				</div>
+				<div class="main-acticle-text">
+					{{? it.length > 0 }}
+						{{~it: article : i}}
+							<p style="cursor: pointer;" onclick="toShowArticle('{{= article.objId }}')">{{= article.createTime }}&nbsp;{{= article.name }}</p>
+						{{~}}
+					{{??}}
+						<p>暂无相关信息</p>
+					{{?}}
+				</div>
+				<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+					<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+				</div>
+			</div>
+			{{ console.log(it); }}
+		</script>
+		<!--zltswq 专利技术融资-->
+		<script id="template_zljsrz" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">专利技术融资</div>
+					<div class="acticle-sub-titlebg"></div>
+					<div class="acticle-sub-titleline" style="position: absolute; bottom: 0; height: 1px; background-color: #3b96ef; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef;"></div>
+				</div>
+				<div class="main-acticle-text">
+					{{? it.length > 0 }}
+						{{~it: article : i}}
+							<p style="cursor: pointer;" onclick="toShowArticle('{{= article.objId }}')">{{= article.createTime }}&nbsp;{{= article.name }}</p>
+						{{~}}
+					{{??}}
+						<p>暂无相关信息</p>
+					{{?}}
+				</div>
+				<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+					<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+				</div>
+			</div>
+			{{ console.log(it); }}
+		</script>
+
+		<script src="js/jquery-3.2.0.min.js"></script>
+		<script src="js/doT.js"></script>
+		<script src="js/comment.js"></script>
+		<script src="js/patent.js"></script>
+	</body>
+</html>

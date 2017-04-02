@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>知识产权服务</title>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/pagelist.css"/>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main-login-top">
+	            <!-- <a  style="float: left;">个人中心</a> -->
+	            <a href="./registerpage1.html">注册</a>
+	            <a id="mainLogina" href="javascript:showLoginBox();">登录</a>
+	        </div>
+	        <div class="main-login-top-two"></div>
+	        <div class="main-top">
+	            <div><img src="img/top.png" alt="竞争力" /></div>
+	        </div>
+			<div class="main-title">
+				<ul>
+	                <li onclick="goToUrl('index')">首页</li>
+	                <li onclick="goToUrl('xinwendongtai')">新闻动态</li>
+	                <li onclick="goToUrl('zhengcefagui')">政策法规</li>
+	                <li onclick="goToUrl('yuanqufengcai')">园区风采</li>
+	                <li class="active" onclick="goToUrl('pagelist')">知识产权服务</li>
+	                <li onclick="goToUrl('guojihezuo')">国际合作</li>
+	                <li onclick="goToUrl('zhonghefuwu')">综合服务</li>
+	                <li onclick="goToUrl('lianxiwomen')">联系我们</li>
+				</ul>
+			</div>
+			<div class="main-body">
+				<div class="main-sub-title">
+					<i class="icon icon-addr"></i>
+					<span>当前位置:</span>
+					<span class="main-sub-addr">首页</span>
+					<span class="main-sub-addr">知识产权服务</span>
+					<span class="main-sub-addr">基础知识</span>
+					<!--<span class="main-sub-addr">宣传培训</span>-->
+				</div>
+				<div class="main-sub-body">
+					<div class="main-acticle">
+						<div class="main-acticle-menu">
+							<div class="main-acticle-menutop">知识产权服务</div>
+							<div class="main-acticle-menutopbg"></div>
+							<ul>
+								<li id="menu_jczs" class="active">基础知识</li>
+								<li id="menu_cywj">创意挖掘</li>
+								<li id="menu_zsyjy">成果展示与交易</li>
+								<li id="menu_zltswq">专利投诉维权</li>
+							</ul>
+						</div>
+						<div class="main-acticle-right main_right_jczs"></div>
+						<div class="main-acticle-right main_right_cywj"></div>
+						<div class="main-acticle-right main_right_zsyjy"></div>
+						<div class="main-acticle-right main_right_zsyjy0"></div>
+						<div class="main-acticle-right main_right_zsyjy1"></div>
+						<div class="main-acticle-right main_right_zsyjy2"></div>
+						<div class="main-acticle-right main_right_zsyjy3"></div>
+						<div class="main-acticle-right main_right_zsyjy4"></div>
+						<div class="main-acticle-right main_right_zsyjy5"></div>
+						<div class="main-acticle-right main_right_zsyjy6"></div>
+						<div class="main-acticle-right main_right_zltswq"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--下面是所有的doT模板 author@ctj -->
+		<!--jczs 基础知识-->
+		<script id="template_jczs" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<!--感觉box-shadow更好
+				<div style="box-shadow: 0 1px 4px 0px #3b96ef;border-radius: 3px;">
+					<div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">宣传培训</div>
+				</div>-->
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">发布专利</div>
+					<div class="acticle-sub-titlebg"></div>
+					<div class="acticle-sub-titleline" style="position: absolute; bottom: 0; height: 1px; background-color: #3b96ef; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef;"></div>
+				</div>
+				<div class="main-acticle-text">
+					<ul>
+						{{? it.length > 0 }}
+							{{~it: article : i}}
+							<li>
+								<div class="text" onclick="toShowArticle('{{= article.objId }}')">{{= article.name }}</div>
+								<div class="time">{{= article.createTime }}</div>
+							</li>
+							{{~}}
+						{{??}}
+							<li>
+								<div class="text">暂无相关信息</div>
+							</li>
+						{{?}}
+						<li>
+							<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+								<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</script>
+		<!--cywj 创意挖掘 -->
+		<script id="template_cywj" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<!--感觉box-shadow更好
+				<div style="box-shadow: 0 1px 4px 0px #3b96ef;border-radius: 3px;">
+					<div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">宣传培训</div>
+				</div>-->
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">专利商标战略</div>
+					<!--<div class="acticle-sub-title-more">更多</div>-->
+					<div class="acticle-sub-titlebg"></div>
+					<div class="acticle-sub-titleline" style="position: absolute; bottom: 0; height: 1px; background-color: #3b96ef; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef;"></div>
+				</div>
+				<div class="main-acticle-text">
+					<ul>
+						{{? it.length > 0 }}
+							{{~it: article : i}}
+							<li>
+								<div class="text" onclick="toShowArticle('{{= article.objId }}')">{{= article.name }}</div>
+								<div class="time">{{= article.createTime }}</div>
+							</li>
+							{{~}}
+						{{??}}
+							<li>
+								<div class="text">暂无相关信息</div>
+							</li>
+						{{?}}
+						<li>
+							<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+								<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</script>
+
+		<!--menu_zsyjy 成果展示与交易模板-->
+		<script id="template_zsyjy" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<!--感觉box-shadow更好
+				<div style="box-shadow: 0 1px 4px 0px #3b96ef;border-radius: 3px;">
+					<div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">宣传培训</div>
+				</div>-->
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">成果展示与交易</div>
+					<div class="acticle-sub-titlebg"></div>
+					<div class="acticle-sub-titleline" style="position: absolute; bottom: 0; height: 1px; background-color: #3b96ef; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef;"></div>
+				</div>
+				<div class="main-acticle-text">
+					<p class="hoverred" onclick="toShowZsyjy(4);" style="cursor: pointer;">展会信息 ></p>
+					<p class="hoverred" onclick="toShowZsyjy(0);" style="cursor: pointer;">专利技术交易 ></p>
+					<!--<p onclick="toShowZsyjy(1);" style="cursor: pointer;">专利需求</p>
+					<p onclick="toShowZsyjy(2);" style="cursor: pointer;">专利转让</p>-->
+					<p class="hoverred" onclick="toShowZsyjy(6);" style="cursor: pointer;">专利产业化 ></p>
+					<p class="hoverred" onclick="toShowZsyjy(5);" style="cursor: pointer;">宣传培训 ></p>
+					<p class="hoverred" onclick="toShowZsyjy(3);" style="cursor: pointer;">表格下载 ></p>
+				</div>
+			</div>
+		</script>
+
+		<!--menu_zsyjy0 child0-->
+		<script id="template_zsyjy0" type="text/x-dot-template">
+			<div class="main-acticle-body" style="margin-top: 20px;">
+				<div style="padding: 8px 16px; color: white; font-size: 16px; border-radius: 5px; position: absolute;top: -20px;left: 10px;background: -webkit-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -o-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -moz-linear-gradient(to bottom, #036ed8, #62b2ff ); background: linear-gradient(to bottom, #036ed8, #62b2ff );">专利转让</div>
+				<div class="acticle-sub-title-more" style="color: red;" onclick="toShowZsyjy(1);">更多</div>
+				<div class="main-table-body">
+					<div style="height: 30px;background-color: #bfe3fd;"></div>
+					<div style="padding: 15px;">
+						<ul>
+							<li class="select_result01"></li>
+							<li>
+								<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+									<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="main-acticle-body" style="margin-top: 40px;">
+				<div style="padding: 8px 16px; color: white; font-size: 16px; border-radius: 5px; position: absolute;top: -20px;left: 10px;background: -webkit-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -o-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -moz-linear-gradient(to bottom, #036ed8, #62b2ff ); background: linear-gradient(to bottom, #036ed8, #62b2ff );">专利需求</div>
+				<div class="acticle-sub-title-more" style="color: red;" onclick="toShowZsyjy(2);">更多</div>
+				<div class="main-table-body">
+					<div style="height: 30px;background-color: #bfe3fd;"></div>
+					<div style="padding: 15px;">
+						<ul>
+							<li class="select_result02"></li>
+							<li>
+								<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+									<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<!--menu_zsyjy2 child2-->
+		<script id="template_zsyjy2" type="text/x-dot-template">
+			<div class="main-acticle-body" style="margin-top: 20px;">
+				<div style="padding: 8px 16px; color: white; font-size: 16px; border-radius: 5px; position: absolute;top: -20px;left: 10px;background: -webkit-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -o-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -moz-linear-gradient(to bottom, #036ed8, #62b2ff ); background: linear-gradient(to bottom, #036ed8, #62b2ff );">专利需求</div>
+				<div class="main-table-body">
+					<div style="height: 20px;background-color: #bfe3fd;"></div>
+					<div style="padding: 15px;">
+						<ul>
+							<li>
+								<span style="vertical-align: middle;">项目名称:&nbsp;</span><input id="zl_project_name" type="text" value="" style="height: 24px; border: 1px solid #ccc;"/>
+								<span style="vertical-align: middle;margin-left: 20px;">合作方式:&nbsp;</span>
+								<select id="zl_coop_type">
+									<option value="1">普通实施许可</option>
+									<option value="2">非独占实施许可</option>
+									<option value="3">排他实施许可</option>
+								</select>
+							</li>
+							<li>
+								<span style="vertical-align: middle;">专利类型:&nbsp;</span>
+								<select id="zl_type">
+									<option value="1">发明专利</option>
+									<option value="2">实用新型</option>
+									<option value="3">外观设计</option>
+								</select>
+								<div class="btn unselectable" onclick="select_zl(1);">查询</div>
+							</li>
+							<li class="select_result"></li>
+							<li>
+								<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+									<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<!--menu_zsyjy1 child1-->
+		<script id="template_zsyjy1" type="text/x-dot-template">
+			<div class="main-acticle-body" style="margin-top: 20px;">
+				<div style="padding: 8px 16px; color: white; font-size: 16px; border-radius: 5px; position: absolute;top: -20px;left: 10px;background: -webkit-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -o-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -moz-linear-gradient(to bottom, #036ed8, #62b2ff ); background: linear-gradient(to bottom, #036ed8, #62b2ff );">专利转让</div>
+				<div class="main-table-body">
+					<div style="height: 20px;background-color: #bfe3fd;"></div>
+					<div style="padding: 15px;">
+						<ul>
+							<li>
+								<span style="vertical-align: middle;">专利号:&nbsp;&nbsp;</span><input id="zl_patent_no" type="text" value="" style="height: 24px; width: 120px; border: 1px solid #ccc;"/>
+								<span style="vertical-align: middle; margin-left: 20px;">合作方式:&nbsp;</span>
+								<select id="zl_coop_type">
+									<option value="1">普通实施许可</option>
+									<option value="2">非独占实施许可</option>
+									<option value="3">排他实施许可</option>
+								</select>
+							</li>
+							<li>
+								<span style="vertical-align: middle;">技术名称:&nbsp;</span><input id="zl_patent_name" type="text" value="" style="height: 24px; width: 120px; border: 1px solid #ccc;"/>
+								<span style="vertical-align: middle; margin-left: 20px;">技术先进性:&nbsp;</span>
+								<select id="zl_advancement">
+									<option value="1">国内领先</option>
+									<option value="2">国际领先</option>
+									<option value="3">国内先进</option>
+									<option value="4">国际先进</option>
+								</select>
+								<div class="btn unselectable" style="margin-left: 5%;" onclick="select_zl(1);">查询</div>
+							</li>
+							<li>
+								<span style="vertical-align: middle;">转让金额:&nbsp;</span><input id="zl_sale_price" type="text" value="" style="height: 24px; width: 120px; border: 1px solid #ccc;"/>
+								<span style="vertical-align: middle; margin-left: 20px;">专利类型:&nbsp;</span>
+								<select id="zl_type">
+									<option value="1">发明专利</option>
+									<option value="2">实用新型</option>
+									<option value="3">外观设计</option>
+								</select>
+							</li>
+							<li class="select_result"></li>
+							<li>
+								<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+									<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<!--menu_zsyjy3 child3-->
+		<script id="template_zsyjy3" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div style="border-radius: 3px;position: relative;">
+					<div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">表格下载</div>
+					<div style="position: absolute; bottom: 0; height: 1px; background-color: #7cbfff; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef; border-radius: 15%; z-index: -1;"></div>
+				</div>
+				<div class="main-acticle-text"></div>
+			</div>
+			<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+				<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+			</div>
+		</script>
+
+		<!--menu_zsyjy4 child4-->
+		<script id="template_zsyjy4" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div style="border-radius: 3px;position: relative;">
+					<div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">展会信息</div>
+					<div style="position: absolute; bottom: 0; height: 1px; background-color: #7cbfff; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef; border-radius: 15%; z-index: -1;"></div>
+				</div>
+				<div class="main-acticle-text">
+					{{? it.length > 0 }}
+						{{~it: article : i}}
+							<p style="cursor: pointer;" onclick="toShowArticle('{{= article.objId }}')">{{= article.name }}</p>
+						{{~}}
+					{{??}}
+						<p>暂无相关信息</p>
+					{{?}}
+				</div>
+			</div>
+			<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+				<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+			</div>
+		</script>
+
+		<!--menu_zsyjy5 child5-->
+		<script id="template_zsyjy5" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div style="border-radius: 3px;position: relative;">
+					<div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">宣传培训</div>
+					<div style="position: absolute; bottom: 0; height: 1px; background-color: #7cbfff; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef; border-radius: 15%; z-index: -1;"></div>
+				</div>
+				<div class="main-acticle-text">
+					{{? it.length > 0 }}
+						{{~it: article : i}}
+							<p style="cursor: pointer;" onclick="toShowArticle('{{= article.objId }}')">{{= article.name }}</p>
+						{{~}}
+					{{??}}
+						<p>暂无相关信息</p>
+					{{?}}
+				</div>
+			</div>
+			<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+				<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+			</div>
+		</script>
+
+		<!--zltswq 专利投诉维权模板-->
+		<script id="template_zltswq" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">专利投诉维权</div>
+					<div class="acticle-sub-titlebg"></div>
+					<div class="acticle-sub-titleline" style="position: absolute; bottom: 0; height: 1px; background-color: #3b96ef; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef;"></div>
+				</div>
+				<div class="main-acticle-text">
+					<div style="text-align: center;margin: 50px 0;">
+						<div onclick="toTouShu();" style="background: linear-gradient(to bottom, #f7a000, #e46d00);display: inline-block;color: white;padding: 30px 20px;font-size: 18px;font-weight: bold;border-radius: 5px;margin: 0 30px;cursor: pointer;">专利侵权举报</div>
+						<div onclick="toJuBao();" style="background: linear-gradient(to bottom, #f7a000, #e46d00);display: inline-block;color: white;padding: 30px 20px;font-size: 18px;font-weight: bold;border-radius: 5px;margin: 0 30px;cursor: pointer;">产品假冒举报</div>
+					</div>
+				</div>
+			</div>
+		</script>
+
+
+
+		<script src="js/jquery-3.2.0.min.js"></script>
+		<script src="js/doT.js"></script>
+		<script src="js/comment.js"></script>
+		<script src="js/pagelist.js"></script>
+	</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>联系我们</title>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<style>
+			.main-acticle .acticle-body{
+				border:2px solid #378cdd;
+				position:relative;
+				text-align:center;
+				margin-top: 40px;
+			}
+			.acticle-title{
+				position: absolute;
+				width: 120px;
+				height: 40px;
+				line-height: 40px;
+				top: -22px;
+				left: 320px;
+				background: linear-gradient(to bottom, #378cdd, #4da7fd);
+				font-family: 'MicrosoftYaHei';
+				font-size: 16px;
+				color:#fefefe;
+				border-radius: 8px;
+			}
+			.acticle-info{
+				border-collapse: collapse;
+				margin: 70px auto;
+			}
+			.acticle-info td{
+				text-align: left;
+				padding: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main-login-top">
+	            <!-- <a  style="float: left;">个人中心</a> -->
+	            <a href="./registerpage1.html">注册</a>
+	            <a id="mainLogina" href="javascript:showLoginBox();">登录</a>
+	        </div>
+	        <div class="main-login-top-two"></div>
+	        <div class="main-top">
+	            <div><img src="img/top.png" alt="竞争力" /></div>
+	        </div>
+			<div class="main-title">
+				<ul>
+	                <li onclick="goToUrl('index')">首页</li>
+	                <li onclick="goToUrl('xinwendongtai')">新闻动态</li>
+	                <li onclick="goToUrl('zhengcefagui')">政策法规</li>
+	                <li onclick="goToUrl('yuanqufengcai')">园区风采</li>
+	                <li onclick="goToUrl('pagelist')">知识产权服务</li>
+	                <li onclick="goToUrl('guojihezuo')">国际合作</li>
+	                <li onclick="goToUrl('zhonghefuwu')">综合服务</li>
+	                <li class="active" onclick="goToUrl('lianxiwomen')">联系我们</li>
+				</ul>
+			</div>
+			<div class="main-body">
+				<div class="main-sub-title">
+					<i class="icon icon-addr"></i>
+					<span>当前位置:</span>
+					<span class="main-sub-addr">首页</span>
+					<span class="main-sub-addr">联系我们</span>
+				</div>
+				<div class="main-sub-body">
+					<div class="main-acticle">
+						<div class="acticle-body">
+							<div class="acticle-title">联系我们</div>
+							<table class="acticle-info">
+								<tr>
+									<td>单位:</td>
+									<td>长寿经开区联系方式</td>
+								</tr>
+								<tr>
+									<td>地址:</td>
+									<td>长寿经开区联系方式</td>
+								</tr>
+								<tr>
+									<td>电话:</td>
+									<td>020-234234234</td>
+								</tr>
+								<tr>
+									<td>传真:</td>
+									<td>020-2323424342</td>
+								</tr>
+								<tr>
+									<td>邮编:</td>
+									<td>6261362</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-3.2.0.min.js"></script>
+		<script src="js/comment.js"></script>
+	</body>
+</html>

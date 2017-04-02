@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>知识产权服务</title>
+		<link rel="stylesheet" type="text/css" href="./css/top.css"/>
+		<!-- 插件 -->
+		<!-- <link href="./cssl/foundation.min.css" rel="stylesheet" type="text/css"> -->
+		<link href="./cssl/foundation-datepicker.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			.main-acticle-body {
+			    position: relative;
+			    border-radius: 2px;
+			    border: 1px solid #5ca1e3;
+			    margin-bottom: 20px;
+			}
+			.main-table-body table {
+			    width: 100%;
+			    border-collapse: collapse;
+			}
+			.main-table-body td{
+				text-align: left;
+				line-height: 24px;
+				padding: 8px 5px;
+				border: 1px solid #e2e2e2;
+				font-size: 14px;
+    			color: #6f6f6f;
+    			font-weight: bold;
+			}
+			.main-table-body tr td:first-child{
+				text-align: right;
+				width: 100px;
+    			padding-right: 30px;
+			}
+			.main-release-title{
+				width: 200px;
+				height: 20px;
+				margin: 0 auto;
+				margin-top: 20px;
+				font-size: 20px;
+				font-weight: bold;
+				color: #036ed8;
+			}
+			.release-table-btn{
+				width: 100px;
+				height: 28px;
+				/*position: absolute;*/
+				margin-left: 300px;
+				margin-top: 10px;
+				border-radius: 5px 5px;
+				background-color: #036ed8;
+				color: white;
+				border:1px solid #036ed8;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main-top">
+				<img style="width: 800px;" src="./img/top.png" alt="竞争力" />
+			</div>
+			<div class="main-title">
+				<ul>
+					<li onclick="goToUrl('index')">首页</li>
+	                <li onclick="goToUrl('xinwendongtai')">新闻动态</li>
+	                <li onclick="goToUrl('zhengcefagui')">政策法规</li>
+	                <li onclick="goToUrl('yuanqufengcai')">园区风采</li>
+	                <li class="active" onclick="goToUrl('pagelist')">知识产权服务</li>
+	                <li onclick="goToUrl('guojihezuo')">国际合作</li>
+	                <li onclick="goToUrl('zhonghefuwu')">综合服务</li>
+	                <li onclick="goToUrl('lianxiwomen')">联系我们</li>
+				</ul>
+			</div>
+			<div class="main-body">
+				<div class="main-sub-title">
+					<i class="icon icon-addr"></i>
+					<span>当前位置:</span>
+					<span class="main-sub-addr">首页</span>
+					<span class="main-sub-addr">知识产权服务</span>
+					<span class="main-sub-addr">成果展示与交易</span>
+					<span class="main-sub-addr">发布专利转让信息</span>
+				</div>
+				<div class="main-sub-body">
+				<div class="main-release-title">
+					<span>发布专利转让信息</span>
+				</div>
+					<div class="main-acticle-body" style="margin-top: 20px;">
+						<!-- <div style="padding: 8px 16px; color: white; font-size: 16px; border-radius: 5px; position: absolute;top: -20px;left: 10px;background: -webkit-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -o-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -moz-linear-gradient(to bottom, #036ed8, #62b2ff ); background: linear-gradient(to bottom, #036ed8, #62b2ff );">专利转让信息</div> -->
+						<div class="main-table-body" style="margin-top:20px;">
+							<!-- <div style="height: 20px;background-color: #bfe3fd;"></div> -->
+							<form action="" id="forRelease" method="post" accept-charset="utf-8">
+							<div style="padding: 15px;">
+								<table>
+									<tr>
+									   <td style="width: 120px;">专利名称:</td><td colspan="3"><input id="patentName" type="text" name="" style="width: 400px;height: 30px;" />
+									   </td>
+									</tr>
+									<tr><td>专利号:</td><td><input id="patentNo" type="text" name=""></td><td>专利权人:</td><td><input id="owner" type="text" name=""></td></tr>
+									<tr><td>联系人:</td><td><input id="prName" type="text" name=""></td><td>联系手机:</td><td><input id="prPhone" type="" name=""></td></tr>
+									<tr><td>手机:</td><td><input id="" type="text" name=""></td><td>合作方式:</td><td><select id="coopType" style="width: 120px;height: 27px;border-radius: 5px 5px;">
+									<option value="1">普通实施许可</option>
+									<option value="2">非独占实施许可</option>
+									<option value="3">排他实施许可</option>
+									</select></td></tr>
+									<tr><td>专利授权日:</td><td><input type="text"  value="" id="demo-1"><!-- <input id="authTime" type="text" name=""> --></td><td>法律状态:</td><td><select id="legalStatus" style="width: 60px;height: 27px;border-radius: 5px 5px;">
+									<option value="1">有效</option>
+									<option value="2">无效</option>
+									</select></td></tr>
+									<tr><td>技术报价:</td><td><input id="price" type="text" name=""></td><td>图片:</td><td><input type="text" name=""></td></tr>
+									<tr><td>项目领域:</td><td colspan="3"><input id="prodArea" type="text" name=""></td></tr>
+									<tr><td>专利类别:</td><td><select id="type" style="width: 100px;height: 27px;border-radius: 5px 5px;">
+									<option value="1">发明专利</option>
+									<option value="2">实用新型</option>
+									<option value="3">外观设计</option>
+									</select></td><td>出让金额:</td><td><input id="salePrice" type="text" name="">(万元)</td></tr>
+									<tr><td>技术先进性:</td><td><select id="advancement" style="width: 100px;height: 27px;border-radius: 5px 5px;">
+									<option value="1">国内领先</option>
+									<option value="2">国际领先</option>
+									<option value="3">国内先进</option>
+									<option value="4">国际先进</option>
+									</select></td><td></td><td></td></tr>
+									<tr><td>产业化所需时间与投资规模:</td><td colspan="3"><input style="width: 500px;height: 50px;" id="industCost" type="text" name=""></td></tr>
+									<tr><td>技术特点及优势分析:</td><td colspan="3"><input style="width: 500px;height: 50px;" id="chara" type="text" name=""></td></tr>
+									<tr><td>市场前景:</td><td colspan="3"><input style="width: 500px;height: 50px;" id="prospect" type="text" name=""></td></tr>
+									<tr><td>同类技术的竞争分析:</td><td colspan="3"><input style="width: 500px;height: 50px;" id="compAssay" type="text" name=""></td></tr>
+									<tr><td>经济效益与社会效益分析:</td><td colspan="3"><input style="width: 500px;height: 50px;" id="econSocAssay" type="text" name=""></td></tr>
+								</table>
+								<!-- <div class="unselectable" style="width: 120px; height: 40px; line-height: 40px; background-color: #4da7fd; color: white; text-align: center; margin: 24px auto 6px; font-size: 20px; font-weight: bold; border-radius: 10px; cursor: pointer;">关闭</div> -->
+								<button class="release-table-btn" type="button" onclick="release()">确认发布</button>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    <script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="./js/release.js"></script>
+    <!-- 插件 -->
+   <!--  <script src="./jsl/jquery-1.11.3.min.js"></script> -->
+		<script src="./jsl/foundation-datepicker.js"></script>
+		<script src="./jsl/locales/foundation-datepicker.zh-CN.js"></script>
+		<script>
+		$('#demo-1').fdatepicker();
+		$('#demo-2').fdatepicker({
+			format: 'yyyy-mm-dd hh:ii',
+			pickTime: true
+		});
+		$('#demo-3').fdatepicker();
+
+		var nowTemp = new Date();
+		var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+		var checkin = $('#dpd1').fdatepicker({
+			onRender: function (date) {
+				return date.valueOf() < now.valueOf() ? 'disabled' : '';
+			}
+		}).on('changeDate', function (ev) {
+			if (ev.date.valueOf() > checkout.date.valueOf()) {
+				var newDate = new Date(ev.date)
+				newDate.setDate(newDate.getDate() + 1);
+				checkout.update(newDate);
+			}
+			checkin.hide();
+			$('#dpd2')[0].focus();
+		}).data('datepicker');
+		var checkout = $('#dpd2').fdatepicker({
+			onRender: function (date) {
+				return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+			}
+		}).on('changeDate', function (ev) {
+			checkout.hide();
+		}).data('datepicker');
+		</script>
+	</body>
+</html>

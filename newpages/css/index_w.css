@@ -1,0 +1,929 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+a{
+	text-decoration: none;
+}
+input{
+	border:1px solid #A09A9A;
+}
+.header{
+	width: 800px;
+	height: 1200px;
+	/*border: 1px solid #d8cbcb;*/
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 3px -2px 10px -2px #b9dbfb,-3px 0px 10px -2px #b9dbfb;
+}
+.nav{
+	width: 100%;
+	height: 40px;
+	margin-left: 200px;
+}
+.logo{
+	width: 800px;
+	height: 150px;
+	margin: 0 auto;
+}
+/*个人用户*/
+.nav-first{
+	width: 100px;
+	height: 40px;
+	background: #0e70ec;
+	color: white;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+}
+/*企业事业单位*/
+.nav-two{
+	width: 145px;
+	height: 39px;
+	position: absolute;
+	margin-top: -40px;
+	margin-left: 110px;
+	color: #0e70ec;
+	cursor: pointer;
+    line-height: 39px;
+    text-align: center;
+	border-left: 1px solid #F5EDED;
+	border-right: 1px solid #F5EDED;
+	border-top: 1px solid #F5EDED;
+}
+.nav-two2{
+	width: 145px;
+	height: 39px;
+	position: absolute;
+	margin-top: -40px;
+	margin-left: 110px;
+	color: white;
+	cursor: pointer;
+    line-height: 39px;
+    text-align: center;
+	border-left: 1px solid #F5EDED;
+	border-right: 1px solid #F5EDED;
+	border-top: 1px solid #F5EDED;
+	background: #0e70ec;
+}
+.nav-first2{
+	width: 100px;
+	height: 40px;
+	/*background: #0e70ec;*/
+	color: #0e70ec;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+}
+/*我已注册，现在就登录*/
+.nav-tree{
+	width: 200px;
+	position: absolute;
+	margin-top: -28px;
+	margin-left: 400px;
+}
+.nav-tree a{
+	text-decoration: none;
+	color: #ff9800;
+}
+.nav-top{
+	width: 100%;
+	height: 30px;
+	background: #0e70ec;
+	color: white;
+	line-height: 30px;
+}
+.nav-top span{
+	position: absolute;
+	margin-left: 15px;
+}
+/*危险程度*/
+.dag-top{
+    width: 200px;
+    height: 16px;
+    margin-top: 35px;
+    margin-left: 80px;
+}
+.dag{
+	list-style-type: none;
+
+}
+.dag-red1{
+	 background: red;
+}
+.dag-red2{
+	 background: #b5bfcc;
+}
+.dag-red3{
+	 background: #b5bfcc;
+}
+.dag li{
+    width: 50px;
+    height: 5px;
+    float: left;
+    margin-left: 5px;
+}
+.dag-top b{
+	font-size: 10px;
+	color: #b5bfcc;
+	position: absolute;
+	margin-left: 10px;
+	margin-top: -5px;
+}
+/*账户信息输入表单*/
+.table-top{
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	margin-top: 15px;
+	margin-left: 200px;
+}
+.table-con{
+	width: 600px;
+	height: 10px;
+	position: absolute;
+	margin-left:-49px;
+}
+.table-footer{
+	width: 600px;
+	height: 10px;
+	margin-top: 10px;
+	position: absolute;
+	margin-left:-49px;
+}
+.table-top span{
+	font-size: 10px;
+	color: #ff9800;
+	margin-left: 10px;
+}
+/*个人信息输入表单*/
+.table-top2{
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 216px;
+}
+.nav-top2{
+	width: 100%;
+	height: 30px;
+	background: #0e70ec;
+	color: white;
+	margin-top: 160px;
+	line-height: 30px;
+}
+.nav-top2 span{
+	position: absolute;
+	margin-left: 15px;
+}
+.table-con2{
+	width: 600px;
+	height: 10px;
+	position: absolute;
+	margin-left:-80px;
+}
+.table-con3{
+	width: 600px;
+	height: 10px;
+	position: absolute;
+	margin-left:-33px;
+	margin-top: 25px;
+}
+.table-con4{
+	position: absolute;
+	margin-left: 45px;
+	margin-top: 52px;
+}
+.table-register4{
+	position: absolute;
+	margin-left: 45px;
+	margin-top: 55px;
+}
+.table-register{
+	width: 321px;
+	position: absolute;
+	margin-left: -35px;
+	margin-top: 20px;
+}
+.table-con5{
+	width: 400px;
+	position: absolute;
+	margin-left: -50px;
+	margin-top: 95px;
+}
+.table-con52{
+	width: 400px;
+	position: absolute;
+	margin-left: -18px;
+	margin-top: 55px;
+}
+.table-con6{
+	width: 400px;
+	position: absolute;
+	margin-left: -35px;
+	margin-top: 140px;
+}
+.table-p{
+	font-size: 10px;
+	color: red;
+}
+.table-p img{
+	position: absolute;
+	margin-top: -1px;
+	margin-left: -30px;
+}
+/*银行信息*/
+.table-bankli2 img{
+	position: absolute;
+	margin-top: -1px;
+	margin-left: -30px;
+}
+.bankimg{
+	width: 20px;
+	height: 16px;
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 65px;
+}
+.nav-top3{
+	width: 100%;
+	height: 30px;
+	background: #0e70ec;
+	color: white;
+	margin-top: 330px;
+	line-height: 30px;
+}
+.nav-top3 span{
+	position: absolute;
+	margin-left: 15px;
+}
+.table-top3{
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 182px;
+}
+.table-con3{
+	width: 600px;
+	height: 10px;
+	position: absolute;
+	margin-left:-33px;
+	margin-top: 20px;
+}
+.table-bank{
+	list-style-type: none;
+}
+.table-bank li{
+	margin-top: 20px;
+}
+.table-bankli{
+	margin-left:-14px;
+}
+.table-bankli2{
+	font-size: 10px;
+	color: red;
+}
+.table-img{
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 40px;
+}
+.table-img img{
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
+.table-book{
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 125px;
+}
+.table-buton{
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	margin-top: 185px;
+	margin-left: 125px;
+}
+.table-img2{
+	margin-left: 55px;
+	font-size: 10px;
+	color: red;
+}
+.table-book a{
+	color: #0b6dd6;
+}
+.table-onnation{
+	width: 400px;
+	height: 16px;
+	position: absolute;
+	margin-left: -31px;
+}
+/*验证提示*/
+em{
+   color: green;
+}
+/*身份证验证提示*/
+/*.identityTips{
+	margin-left: 10px;
+}*/
+
+/*产品假冒投诉维权*/
+.content-rights{
+	width: 800px;
+	margin: 0 auto;
+	box-shadow: 3px -2px 10px -2px #b9dbfb,-3px 0px 10px -2px #b9dbfb;
+
+}
+.rights-top{
+	margin-left: 20px;
+}
+.rights-top span{
+	font-size: 10px;
+}
+.rights-color{
+	color: #0ea6ea;
+}
+.content-rights2{
+	width: 750px;
+	height: 720px;
+	border: 2px solid #0ea6ea;
+	margin-left: 22px;
+	margin-top: 36px;
+}
+.rights-con{
+	width: 110px;
+	height: 20px;
+	position: absolute;
+	margin-top: 25px;
+	margin-left: 80px;
+	background-color: white;
+	text-align: center;
+}
+.rights-con span{
+	font-size: 15px;
+	color: #0ea6ea;
+}
+.content-rights3{
+	margin-left: 163px;
+}
+.rights-emali{
+	width: 600px;
+	margin-left: -32px;
+}
+.rights-emali span{
+	font-size: 10px;
+	color: red;
+}
+.rights-name{
+	width: 400px;
+	margin-left: -16px;
+}
+.rights-reason{
+	width: 500px;
+	margin-left: -32px;
+}
+.rights-reason p{
+	font-size: 10px;
+	color: red;
+	margin-left: 150px;
+}
+.rights-reason input{
+	width: 250px;
+	height: 100px;
+}
+.rights-list{
+	width: 600px;
+	margin-left: -35px;
+}
+.rights-list p{
+	margin-left: 30px;
+	font-size: 10px;
+	color: red;
+}
+.rights-span{
+	width: 150px;
+	height: 100px;
+	border: 1px solid #968a8a;
+	display: inline-block;
+}
+.rights-list button{
+	width: 60px;
+	height: 30px;
+	background-color: #9e9e9e;
+	cursor: pointer;
+	color: white;
+	margin-top: 65px;
+	margin-left: 5px;
+	position: absolute;
+	border: 1px solid #9e9e9e;
+}
+.rights-pdf{
+	width: 500px;
+	margin-left: 112px;
+}
+
+.rights-pdf button{
+	width: 119px;
+	height: 29px;
+	background-color: #9e9e9e;
+	cursor: pointer;
+	color: white;
+	margin-left: 5px;
+	position: absolute;
+	border: 1px solid #9e9e9e;
+}
+.rights-word{
+	width: 100px;
+    margin-top: 8px;
+    margin-left: 120px;
+    font-size: 10px;
+    color: #0ea6ea;
+}
+.rights-date{
+	width: 300px;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+.rights-buttuon{
+	width: 200px;
+	margin-left: 138px;
+	margin-top: 35px;
+}
+.rights-buttuon button{
+	width: 130px;
+	height: 30px;
+	color: white;
+	border: 1px solid #0ea6ea;
+	background-color: #0ea6ea;
+	cursor: pointer;
+}
+.rights-tel span{
+	font-size: 10px;
+	color: red;
+}
+/*专利投诉维权举报*/
+.rights-con2{
+	width: 130px;
+	height: 20px;
+	position: absolute;
+	margin-top: 25px;
+	margin-left: 80px;
+	background-color: white;
+	text-align: center;
+}
+.rights-con2 span{
+	font-size: 15px;
+	color: #0ea6ea;
+}
+.patent-name{
+	width: 400px;
+	margin-left: 16px;
+}
+.content-patent{
+	width: 750px;
+	height: 800px;
+	border: 2px solid #0ea6ea;
+	margin-left: 22px;
+	margin-top: 36px;
+}
+/*知识产权服务成果展示与交易，表格下载左边*/
+.excel-nav{
+	width: 400px;
+	margin-left: 25px;
+}
+.excel-nav span{
+	font-size: 10px;
+}
+.excel-color {
+	color: #0ea6ea;
+}
+.excel-left{
+	width: 170px;
+	height: 250px;
+	margin-left: 25px;
+	margin-top: 20px;
+	border: 1px solid #0ea6ea;
+}
+.excel-left ul{
+	width: 140px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.excel-left li{
+	width: 140px;
+	height: 23px;
+	list-style-type: none;
+	font-size: 15px;
+	border: 1px solid #c9d3dc;
+	margin-top: 16px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 23px;
+	color: #1b7bce;
+
+}
+.excel-left ul span{
+	width: 140px;
+	height: 23px;
+	display: inline-block;
+	color: white;
+	background-color: #1b7bce;
+}
+.excel-mun{
+	width: 170px;
+	height: 40px;
+	background-color: #1b7bce;
+	color: white;
+	cursor: pointer;
+	text-align: center;
+}
+.excel-mun span{
+	line-height: 40px;
+}
+/*知识产权服务成果展示与交易，表格下载右边*/
+.excel-content{
+	width: 800px;
+	height: 900px;
+	/*border: 1px solid #1b7bce;*/
+	margin: 0 auto;
+	box-shadow: 3px -2px 10px -2px #b9dbfb,-3px 0px 10px -2px #b9dbfb;
+}
+.excel-right{
+	width: 570px;
+	height: 250px;
+	position: absolute;
+	margin-top: -252px;
+	margin-left: 205px;
+	border: 1px solid #1b7bce;
+	border-radius:5px 5px;
+
+}
+.excel-right thead th{
+	height: 30px;
+	background-color: #c1dbe6;
+}
+.excel-nav2{
+	width: 100px;
+	height: 30px;
+	background-color:#1b7bce;
+	color: white;
+	line-height:30px;
+	border-radius:5px 5px;
+	margin-left: -2px;
+}
+.excel-nav2 span{
+	width: 50px;
+	margin-left: 15px;
+}
+.excel-right th{
+    background-color: #c1dbe6;
+	height: 30px;
+	border: 1px solid #c1dbe6;
+}
+.excel-right td{
+	border-bottom: 1px solid #b5d5f1;
+	border-right: 1px solid #b5d5f1;
+}
+.excel-td1{
+	width: 54px;
+	height: 30px;
+	text-align: center;
+}
+.excel-td2{
+	width: 450px;
+	height: 30px;
+}
+.excel-td3{
+	width: 56px;
+	height: 30px;
+	text-align: center;
+}
+/*换页*/
+.excel-button{
+	margin-left: 350px;
+	margin-top: 20px;
+}
+.excel-button ul{
+	list-style-type: none;
+}
+.excel-button li{
+	float: left;
+	margin-left: 10px;
+}
+.excel-button button{
+	width: 26px;
+	height: 26px;
+	color: #1b7bce;
+	cursor: pointer;
+}
+.excel-btn{
+	background-color: #81d2ea;
+	border: 1px solid #81d2ea;
+}
+.excel-right hr{
+	border: 1px solid #1b7bce;
+	margin-left: 3px;
+	margin-top: -1px;
+}
+/*展会信息*/
+.excel-nav2 a{
+	position: absolute;
+	margin-left:420px;
+	display: inline-block;
+	color: #dc5b0c;
+	font-size: 10px;
+}
+.nav2-span{
+	color: #797474;
+}
+.exhibition-td{
+	width: 570px;
+	height: 35px;
+	border-bottom: 1px solid #b5d5f1;
+}
+/*专利技术交易*/
+.excel-right-tran{
+	width: 572px;
+	height: 232px;
+	position: absolute;
+	margin-top: -234px;
+	margin-left: 205px;
+	border: 1px solid #1b7bce;
+	/*border-radius:5px 5px;*/
+}
+.excel-right-tran table{
+	margin-top: 30px;
+}
+.excel-right-tran td{
+	border: 1px solid #b5d5f1;
+}
+.excel-nav2-tran{
+	width: 100px;
+	height: 30px;
+	background-color:#1b7bce;
+	position: absolute;
+	color: white;
+	line-height:30px;
+	border-radius:5px 5px;
+	margin-left: 10px;
+	margin-top: -18px;
+}
+.excel-nav2-tran span{
+	width: 50px;
+	margin-left: 15px;
+}
+.excel-nav2-tran a{
+	position: absolute;
+	width: 200px;
+	margin-left:420px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #dc5b0c;
+	font-size: 10px;
+}
+.tran-td1{
+	width: 100px;
+    height: 35px;
+	border-bottom: 1px solid #b5d5f1;
+}
+
+/*专利转让内容信息*/
+.infor-nav{
+	width: 400px;
+	margin-left: 25px;
+}
+.infor-nav span{
+	font-size: 10px;
+}
+.infor-color {
+	color: #0ea6ea;
+}
+.infor-cons{
+	width: 750px;
+	height: 25px;
+	background-color: #98cae0;
+}
+.infor-con{
+	width: 750px;
+	height: 600px;
+	border: 1px solid #1a8ae2;
+	margin-left: 25px;
+	margin-top: 35px;
+}
+.infor-top{
+	width: 133px;
+	height: 30px;
+	background-color: #1a8ae2;
+	color: white;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #1a8ae2;
+	border-radius:5px 5px;
+	margin-left: 40px;
+	margin-top: 20px;
+	position: absolute;
+}
+.infor-con button{
+	width: 100px;
+	height: 30px;
+	background-color: #1a8ae2;
+	border: 1px solid #1a8ae2;
+    cursor: pointer;
+    margin-left: 350px;
+    margin-top: 80px;
+}
+.infor-content{
+	width: 800px;
+	height: 800px;
+	margin: 0 auto;
+	/*border: 1px solid #c2cbd2;*/
+	box-shadow: 3px -2px 10px -2px #b9dbfb,-3px 0px 10px -2px #b9dbfb;
+}
+/*专利维权首页*/
+.complaint-right{
+	width: 570px;
+	height: 250px;
+	position: absolute;
+	margin-top: -252px;
+	margin-left: 205px;
+	border: 1px solid #bcdbe8;
+	/*border-radius:5px 5px;*/
+
+}
+.complaint-right2{
+	width: 570px;
+	height: 35px;
+	/*margin-top: 2px;*/
+    /*background-color: #bcdbe8;*/
+    background-image: url(../img/complaint3.png);
+}
+.complaint-nav2{
+	width: 140px;
+	height: 35px;
+	position: absolute;
+	background-color:#1b7bce;
+	color: white;
+	line-height:30px;
+	/*border-radius:5px 5px;*/
+	margin-left: -2px;
+}
+.complaint-nav2 span{
+	width: 50px;
+	margin-left: 15px;
+}
+.complaint-img ul{
+	list-style-type: none;
+	margin-left: 20px;
+	margin-top: 50px;
+}
+.complaint-img li{
+	float: left;
+	cursor: pointer;
+	margin-left: 50px;
+}
+/*专利转让*/
+.excel-con-top{
+	width: 572px;
+	height: 30px;
+	border-bottom: 2px solid #505fb5;
+	background-color: #d6eff3;
+}
+.tran-right-table{
+	margin-left: 8px;
+}
+.tran-right-table td{
+	width: 110px;
+	height: 30px;
+	font-weight: bold;
+	border: 1px solid #dbe5e6;
+}
+.tran-right-table th{
+	height: 30px;
+	border: 1px solid #dbe5e6;
+}
+/*专利需求*/
+.excel-con-top2{
+	width: 570px;
+	height: 30px;
+	border-bottom: 2px solid #505fb5;
+	background-color: #d6eff3;
+}
+.excel-right-tran2{
+	width: 570px;
+	height: 232px;
+	position: absolute;
+	margin-top: 30px;
+	margin-left: 205px;
+	border: 1px solid #1b7bce;
+}
+.tran-right-table2 {
+	margin-left: 8px;
+}
+.tran-right-table2 td{
+	width: 110px;
+	height: 30px;
+	font-weight: bold;
+	border: 1px solid #dbe5e6;
+}
+.tran-right-table2 th{
+	height: 30px;
+	border: 1px solid #dbe5e6;
+}
+.excel-right-tran2 table{
+	margin-top: 30px;
+}
+.excel-right-tran2 td{
+	border: 1px solid #b5d5f1;
+}
+.excel-nav2-tran2{
+	width: 100px;
+	height: 30px;
+	position: absolute;
+	background-color:#1b7bce;
+	color: white;
+	line-height:30px;
+	border-radius:5px 5px;
+	margin-left: 10px;
+	margin-top: -17px;
+}
+.excel-nav2-tran2 span{
+	width: 50px;
+	margin-left: 15px;
+}
+.excel-nav2-tran2 a{
+	width: 200px;
+	position: absolute;
+	margin-left:420px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #dc5b0c;
+	font-size: 10px;
+}
+/*国际合作*/
+.operation-top{
+	width: 800px;
+	height: 266px;
+	margin-top: 20px;
+}
+.operation-top img{
+	width: 800px;
+	height: 266px;
+	display: inline-block;
+	margin:0 auto;
+}
+.operation-box{
+	width: 800px;
+	margin-top: 30px;
+    border: 1px solid #378cdd;
+}
+.operation-box-nav{
+	float: left;
+    border-left: 30px solid #6da941;
+    border-right: 50px solid transparent;
+    border-bottom: 30px solid transparent;
+    margin-left: 120px;
+    margin-top: -32px;
+}
+.operation-box-con{
+	width: 750px;
+	border: 1px solid #378cdd;
+	margin: 0 auto;
+	margin-top: 46px;
+	margin-bottom: 300px;
+	background-color: #e8e8e8;
+}
+.operation-box-top{
+	width: 750px;
+	height:30px;
+	background-color: #bfe3fd;
+	border-bottom: 2px solid #6da941;
+}
+.operation-box-span{
+	width: 120px;
+	height: 30px;
+	background-color: #6da941;
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	font-family: Microsoft YaHei;
+	color: #ffffff;
+}
+.operation-box-ul{
+	margin-left: 30px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.operation-box-ul li{
+	margin-top: 30px;
+	font-family: Microsoft YaHei;
+	color: #333333;
+}

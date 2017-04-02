@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>园区风采</title>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/pagelist.css"/>
+		<style>
+			.acticle-sub-title{
+				padding-bottom: 0;
+				padding-top: 2px;
+			}
+			.acticle-sub-title-txt{
+				background-color: #6da941;
+			    font-size: 16px;
+			    font-weight: normal;
+			    padding: 3px 20px 5px;
+			}
+			.acticle-sub-titleline{
+				position: absolute;
+				top: 0;
+				height: 0;
+				background-color: #6da941;
+				width: 100%;
+				border-top: 1px solid #6da941;
+				border-bottom: 1px solid #6da941;
+			}
+			.main-acticle-text li{
+				position: relative;
+			}
+			.main-acticle-text li .more-info{
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				color: #ff3d02;
+				cursor: pointer;
+			}
+			.main-acticle-text li div{
+				float:left;
+			}
+			.main-acticle-text ul, .main-acticle-text li{
+				padding: 10px;
+			}
+			.acticle-person{
+				margin-top: 10px;
+			}
+			.acticle-person:after{
+				display: block;
+				content: "";
+				clear: both;
+			}
+			.acticle-person .person-info{
+				float: left;
+				width: 25%;
+				margin-left: 5px;
+				padding: 5px;
+				border:1px solid #6da941;
+				border-radius: 5px;
+				text-align: center;
+			}
+			.acticle-person .person-detail{
+				float: right;
+				width: 65%;
+				margin-right: 5px;
+				padding: 5px;
+				border:1px solid #6da941;
+				border-radius: 5px;
+			}
+			.main-acticle-option{
+				border: 1px solid #ccc;
+    			margin-top: 5px;
+			}
+			.main-acticle-option:after,.typelev2:after{
+				display: block;
+				content: "";
+				clear: both;
+			}
+			.main-acticle-option .typelev1{
+				padding:10px;
+				float:left;
+				cursor: pointer;
+			}
+			.main-acticle-select{
+				text-align: center;
+			    padding: 5px 0;
+				margin-top: 5px;
+			    border: 1px solid #ccc;
+			}
+			.main-acticle-select>input{
+				width: 80px;
+				height: 24px;
+				border:1px solid #ccc;
+				text-indent: 3px;
+			}
+			.main-acticle-select>*{
+				vertical-align: middle;
+				margin: 0 5px;
+			}
+			.main-acticle-text .product-list{
+				border: 1px solid #2889e8;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main-login-top">
+	            <!-- <a  style="float: left;">个人中心</a> -->
+	            <a href="./registerpage1.html">注册</a>
+	            <a id="mainLogina" href="javascript:showLoginBox();">登录</a>
+	        </div>
+	        <div class="main-login-top-two"></div>
+	        <div class="main-top">
+	            <div><img src="img/top.png" alt="竞争力" /></div>
+	        </div>
+			<div class="main-title">
+				<ul>
+					<li onclick="goToUrl('index')">首页</li>
+	                <li onclick="goToUrl('xinwendongtai')">新闻动态</li>
+	                <li onclick="goToUrl('zhengcefagui')">政策法规</li>
+	                <li class="active" onclick="goToUrl('yuanqufengcai')">园区风采</li>
+	                <li onclick="goToUrl('pagelist')">知识产权服务</li>
+	                <li onclick="goToUrl('guojihezuo')">国际合作</li>
+	                <li onclick="goToUrl('zhonghefuwu')">综合服务</li>
+	                <li onclick="goToUrl('lianxiwomen')">联系我们</li>
+				</ul>
+			</div>
+			<div class="main-body">
+				<div class="main-sub-title">
+					<i class="icon icon-addr"></i>
+					<span>当前位置:</span>
+					<span class="main-sub-addr">首页</span>
+					<span class="main-sub-addr">知识产权服务</span>
+					<span class="main-sub-addr">基础知识</span>
+					<!--<span class="main-sub-addr">宣传培训</span>-->
+				</div>
+				<div class="main-sub-body">
+					<div class="main-acticle">
+						<div class="main-acticle-menu">
+							<div class="main-acticle-menutop">知识产权服务</div>
+							<div class="main-acticle-menutopbg"></div>
+							<ul>
+								<li id="menu_yqjj" class="active">园区简介</li>
+								<li id="menu_zjjs">专家介绍</li>
+								<li id="menu_qyzc">企业之窗</li>
+								<li id="menu_yqcp">园区产品</li>
+							</ul>
+						</div>
+						<div class="main-acticle-right main_right_yqjj"></div>
+						<div class="main-acticle-right main_right_zjjs"></div>
+						<div class="main-acticle-right main_right_zjjs_info"></div>
+						<div class="main-acticle-right main_right_qyzc"></div>
+						<div class="main-acticle-right main_right_yqcp"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--下面是所有的doT模板 author@ctj -->
+		<!--yqjj 园区简介-->
+		<script id="template_yqjj" type="text/x-dot-template">
+			<div class="main-acticle-body" style="border: 0;">
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">园区简介</div>
+					<div class="acticle-sub-titleline"></div>
+				</div>
+				<div class="main-acticle-text">
+					<ul>
+						{{? it.length > 0 }}
+							<li>
+								<div>{{= it[0].content }}</div>
+							</li>
+						{{??}}
+							<li>
+								<div class="text">暂无相关信息</div>
+							</li>
+						{{?}}
+					</ul>
+				</div>
+			</div>
+		</script>
+		<!--zjjs 专家介绍-->
+		<script id="template_zjjs" type="text/x-dot-template">
+			<div class="main-acticle-body" style="border: 0;">
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">专家介绍</div>
+					<div class="acticle-sub-titleline"></div>
+				</div>
+				<div class="main-acticle-text">
+					<ul>
+						{{? it.length > 0 }}
+							{{~it: person : i}}
+							<li>
+								<div><img src="{{= person.image }}" alt="" style="width: 240px; height: 160px;"/></div>
+								<div style="padding: 5px 0 5px 10px; width: 315px;">
+									<h3>{{= person.name }}</h3>
+									<p style="line-height: 22px;margin-top: 20px;">{{= person.intro }}</p>
+								</div>
+								<div class="more-info" onclick="toShowDetailInfo('{{= person.objId }}');">详细信息>></div>
+							</li>
+							{{~}}
+						{{??}}
+							<li>
+								<div class="text">暂无相关信息</div>
+							</li>
+						{{?}}
+						<li>
+							<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+								<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</script>
+		<!--zjjsinfo 专家介绍详情-->
+		<script id="template_zjjs_info" type="text/x-dot-template">
+			<div class="main-acticle-body" style="border: 0;">
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">专家介绍</div>
+					<div class="acticle-sub-titleline"></div>
+				</div>
+				<div class="main-acticle-text">
+					<div class="acticle-person">
+						<div class="person-info">
+							<img src="{{= it.image }}" alt=""/>
+							<div style="color: #6da941;">
+								<p style="margin:10px 0;">{{= it.name }}</p>
+								/*<p style="margin:10px 0;">博士</p>
+								<p style="margin:10px 0;">经济学院副院长</p>*/
+							</div>
+							<div>
+								<p style="margin:10px 0;">个人简历</p>
+								<p style="margin:10px 0;">研究领域</p>
+								<p style="margin:10px 0;">学术兼职</p>
+								<p style="margin:10px 0;">社会荣誉</p>
+								<p style="margin:10px 0;">研究成果</p>
+							</div>
+						</div>
+						<div class="person-detail">
+							<div style="padding: 15px;">{{= it.introduction }}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</script>
+		<!--qypc 企业之窗-->
+		<script id="template_qyzc" type="text/x-dot-template">
+			<div class="main-acticle-body" style="border: 0;">
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">企业之窗</div>
+					<div class="acticle-sub-titleline"></div>
+				</div>
+				<div class="main-acticle-text">
+					<ul>
+						{{? it.length > 0 }}
+							{{~it: article : i}}
+							<li style="padding: 5px;">
+								<div class="text" onclick="toShowArticle('{{= article.objId }}')">{{= article.name }}</div>
+								<div class="time">{{= article.createTime }}</div>
+							</li>
+							{{~}}
+						{{??}}
+							<li>
+								<div class="text">暂无相关信息</div>
+							</li>
+						{{?}}
+						<li>
+							<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+								<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</script>
+		<!--yqcp 园区产品-->
+		<script id="template_yqcp" type="text/x-dot-template">
+			<div class="main-acticle-body" style="border: 0;">
+				<div class="acticle-sub-title">
+					<div class="acticle-sub-title-txt">园区产品</div>
+					<div class="acticle-sub-titleline"></div>
+				</div>
+				<div class="main-acticle-option"></div>
+				<div class="main-acticle-select">
+					<span>名称</span>
+					<input id="name" type="text"/>
+					<span>产品类别</span>
+					<input id="prodtype" type="text" readonly/>
+					<span>联系人</span>
+					<input id="contname" type="text"/>
+					<button style="border:0;background: linear-gradient(to bottom, #036ed8, #62b2ff);color:#fff;padding:5px 13px;" onclick="resetSelect();">重置</button>
+					<button style="border:0;background: linear-gradient(to bottom, #036ed8, #62b2ff);color:#fff;padding:5px 13px;" onclick="selectProduct(1);">查询</button>
+				</div>
+				<div class="main-acticle-text"></div>
+			</div>
+		</script>
+
+		<script src="js/jquery-3.2.0.min.js"></script>
+		<script src="https://cdn.bootcss.com/layer/3.0.1/layer.js"></script>
+		<script src="js/doT.js"></script>
+		<script src="js/comment.js"></script>
+		<script src="js/yuanqufengcai.js"></script>
+	</body>
+</html>

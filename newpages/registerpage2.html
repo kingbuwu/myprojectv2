@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>企事业单位用户</title>
+    <link rel="stylesheet" type="text/css" href="./css/index_w.css">
+     <!-- 提示框插件 -->
+     <link rel="stylesheet" type="text/css" href="./tip/zeroModal.css" />
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo" src="./img/top.png" />
+        <div class="nav">
+            <a href="./registerpage1.html"><span class="nav-first2">个人用户</span></a>
+            <span class="nav-two2">企事业单位用户</span>
+            <span class="nav-tree">我已注册，现在就<a href="javascript:showLoginBox();">登陆</a></span>
+        </div>
+        <form action="" id="myform2" method="post">
+            <!-- 账户信息表单 -->
+            <div class="nav-top"><span>账户信息</span></div>
+            <div class="table-top">
+                <tr>
+                    <td>
+                        <label for="username"><span style="color:#ff9800">*</span>账号: &nbsp</label>
+                        <input style="height: 28px;width: 200px;" onfocus="showHow1();"
+                    onblur="showWrong1();" type="text" name="username" id="username"></input><span id="username_notice2">4-20位字母，支持汉字、数字组成</span></td>
+                    <br/>
+                    <br/>
+                    <div class="table-con">
+                        <td>
+                            <label for="password"><span style="color:#ff9800">*</span>请设置密码: &nbsp</label>
+                            <input style="height: 28px;width: 200px;" onKeyUp=pwStrength(this.value) onBlur=pwStrength(this.value) type="password" name="password" id="password"></input><span id="pwd1Tips" class="pwd1Tips">6-20位字母，建议由字母数字符号组成</span>
+                        </td>
+                    </div>
+                    <!-- 密码危险程度 -->
+                    <div class="dag-top">
+                        <lu class="dag">
+                            <li class="dag-red1" id="strength_L"></li>
+                            <li class="dag-red2" id="strength_M"></li>
+                            <li class="dag-red3" id="strength_H"></li>
+                        </lu>
+                        <b><span id="dengo">危险</span></b>
+                    </div>
+                    <div class="table-footer">
+                        <td>
+                            <label><span style="color:#ff9800">*</span>请确认密码：&nbsp</label>
+                            <input style="height: 28px;width: 200px;" type="password" name="password2" id="password2"></input><span id="pwd2Tips">请再次输入密码</span>
+                        </td>
+                    </div>
+                </tr>
+            </div>
+            <!-- 企事业单位信息信息 -->
+            <div class="nav-top2"><span>企事业单位信息信息</span></div>
+            <div class="table-top2">
+                <p class="table-p"><img src="./img/logobit.png" />需严格按照身份证名称填写，填写错误将不予任何服务</p>
+                <br/>
+                <tr>
+                    <td>
+                        <div class="table-onnation">
+                            <label>机构全称：&nbsp</label>
+                            <input style="height: 28px;width: 200px;" type="text" id="applyName"></input>
+                        </div>
+                    </td>
+                    <br/>
+                    <br/>
+                    <div class="table-con2">
+                        <td>
+                            <label for="identity">营业执照注册号：&nbsp</label>
+                            <input style="height: 28px;width: 200px;" type="text" id="idCard"></input>
+                        </td>
+                        <span id="identityTips" class="identityTips"></span>
+                    </div>
+                    <br/>
+                    <div class="table-register">
+                        <td>
+                            <label>联系地址：&nbsp</label>
+                            <select id="adCity" style="width:65px;height: 28px;">
+                                <option grade="1" value="重庆市">重庆市</option>
+                            </select>
+                            <select id="adRegion" style="width:65px;height: 28px;">
+                                <option grade="1" value="长寿区">长寿区</option>
+                                 <option grade="2" value="九区">九区</option>
+                            </select>
+                            <select id="adStreet" style="width:65px;height: 28px;">
+                                <option grade="3" value="请选择">请选择</option>
+                                <option grade="4" value="十街">十街</option>
+                            </select>
+                            <br>
+                    </div>
+                    &nbsp
+                    <!-- 详细地址 -->
+                    <input style="height: 28px;width: 230px;" class="table-register4" id="adDetail" type="text" name=""></input>
+                    <br/>
+                    <br/>
+                    <!-- 联系信息 -->
+                    <div class="table-con52">
+                        <label>联系人：&nbsp</label>
+                        <input style="height: 28px;width: 200px;" type="text" id="contName"></input>
+                    </div>
+                    <div class="table-con5">
+                        <td>
+                            <label>联系人电话：&nbsp</label>
+                            <input style="height: 28px;width: 200px;" type="text" id="contPhone"></input>
+                        </td>
+                    </div>
+                    <div class="table-con6">
+                        <td>
+                            <label>电子邮箱：&nbsp</label>
+                            <input style="height: 28px;width: 200px;" type="email" id="contEmai"></input>
+                        </td>
+                    </div>
+                </tr>
+            </div>
+            <!-- 个人信息 -->
+            <div class="nav-top3"><span>银行信息</span></div>
+            <div class="table-top3">
+                <ul class="table-bank">
+                    <li class="table-bankli2"><img src="./img/logobit.png" />以下银行账户信息用于办理专利申请资助等服务，请务必正确填写。</li>
+                    <li class="table-bankli">
+                        <label>银行开户名：&nbsp</label>
+                        <input style="height: 28px;width: 200px;" type="text" id="bankUser"></input>
+                    </li>
+                    <li>
+                        <label>开户银行：&nbsp</label>
+                        <input style="height: 28px;width: 200px;" type="text" id="bankName"></input>
+                    </li>
+                    <li>
+                        <label>开户网点：&nbsp</label>
+                        <input style="height: 28px;width: 200px;" type="text" id="bankSite"></input>
+                    </li>
+                    <li>
+                        <label>银行账户：&nbsp</label>
+                        <input style="height: 28px;width: 200px;" type="text" id="bankCard"></input>
+                    </li>
+                </ul>
+                <div class="bankimg"><img src="./img/logobit.png" /></div>
+                <div class="table-img">
+                    <span class="table-img2">请上传身份证信息</span>
+                    <br>
+                    <br>
+                    <span class="table-spanimg">图片上传：&nbsp</span><img src="./img/register1.png">
+                    <input type="file" id="image" onchange="cardImg(this, 'company')" style="filter:alpha(opacity=0);opacity:0;width:100px;height:100px;margin-left: -110px;margin-top: -2px;position: absolute;cursor: pointer;" />
+                    <img id="imgup" src="./img/register2.png">
+                </div>
+                <div class="table-book">
+                    <input type="checkbox" name="" id="usage" /><span>已阅读并同意<a href="#"><注册协议></a></span><span id="usageTips"></span>
+                    <br>
+                </div>
+                <div class="table-buton">
+                    <button class="button" onclick="register2()" type="button" value="立即注册" style="background:#0e70ec;
+    color:white;width: 160px;height: 35px;cursor: pointer;border:1px solid #0e70ec;">立即注册</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="./js/comment.js"></script>
+    <script type="text/javascript" src="./js/register.js"></script>
+    <!-- 提示框插件 -->
+    <script src="./tip/zeroModal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人中心</title>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/pagelist.css"/>
+		<style type="text/css">
+			.main-acticle-menu{
+				border-radius: 10px 10px 0 0;
+				border: 1px solid #ccc;
+			}
+			.main-acticle-menutop{
+				background-color: #3a90e2;
+				border-radius: 10px 10px 0 0;
+			}
+			.main-acticle-menu ul{
+				padding: 0;
+			}
+			.main-acticle-menu li{
+				border: 0;
+				color: black;
+				font-size: 16px;
+				padding: 7px 20px;
+				margin: 0;
+				border-bottom: 1px solid #ccc;
+			}
+			.main-acticle-menu li:last-child{
+				border-bottom: 0;
+			}
+			.main-acticle-menu li.active, .main-acticle-menu li:hover{
+				background-color: white;
+				color: #3b8edd;
+			}
+			.main-acticle-menu li:after{
+				height: 0;
+				content: "";
+			}
+			.operate span{
+				margin:0 5px;
+			}
+			.cando{
+				color: #3b8edd;
+				cursor: pointer;
+			}
+			.over{
+				color:orangered;
+			}
+			.info_self{
+			    border-collapse: collapse;
+			    width: 90%;
+				margin: 0 auto;
+			}
+			.info_self td{
+				font-size: 18px;
+				padding: 10px;
+			}
+			.info_self .infoname{
+				display: inline-block;
+				width: 120px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main-login-top">
+	            <!-- <a  style="float: left;">个人中心</a> -->
+	            <a href="./registerpage1.html">注册</a>
+	            <a id="mainLogina" href="javascript:showLoginBox();">登录</a>
+	        </div>
+	        <div class="main-login-top-two"></div>
+	        <div class="main-top">
+	            <div><img src="img/top.png" alt="竞争力" /></div>
+	        </div>
+			<div class="main-title">
+				<ul>
+					<li class="active" onclick="goToUrl('index')">首页</li>
+					<li onclick="goToUrl('xinwendongtai')">新闻动态</li>
+					<li onclick="goToUrl('zhengcefagui')">政策法规</li>
+					<li onclick="goToUrl('yuanqufengcai')">园区风采</li>
+					<li onclick="goToUrl('pagelist')">知识产权服务</li>
+					<li onclick="goToUrl('guojihezuo')">国际合作</li>
+					<li onclick="goToUrl('zhonghefuwu')">综合服务</li>
+					<li onclick="goToUrl('lianxiwomen')">联系我们</li>
+				</ul>
+			</div>
+			<div class="main-body">
+				<div class="main-sub-title">
+					<i class="icon icon-addr"></i>
+					<span>当前位置:</span>
+					<span class="main-sub-addr">首页</span>
+					<span class="main-sub-addr">个人中心</span>
+					<!--<span class="main-sub-addr">宣传培训</span>-->
+				</div>
+				<div class="main-sub-body">
+					<div class="main-acticle">
+						<div class="main-acticle-menu">
+							<div class="main-acticle-menutop">全部功能</div>
+							<ul>
+								<li id="menu_myself" class="active">个人中心</li>
+								<li id="menu_myzhuanli">我的专利</li>
+								<li id="menu_myxuqiu">我的需求</li>
+								<li id="menu_mybuy">我的购买</li>
+								<li id="menu_myorder">我的预约</li>
+							</ul>
+						</div>
+						<div class="main-acticle-right main_right_self"></div>
+						<div class="main-acticle-right main_right_zhuanli"></div>
+						<div class="main-acticle-right main_right_xuqiu"></div>
+						<div class="main-acticle-right main_right_buy"></div>
+						<div class="main-acticle-right main_right_order"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--下面是所有的doT模板 author@ctj -->
+		<script id="template_self" type="text/x-dot-template">
+			<div class="main-acticle-body" style="padding: 30px;">
+				<table class="info_self" border="0" cellspacing="" cellpadding="">
+					<tr><td colspan="2" style="text-align: center;">{{= it.typeName }}</td></tr>
+					<tr><td>用户账号:<span>23412</span></span></td><td>姓名:<span>{{= it.applyName }}</span></td></tr>
+					<tr>
+						<td colspan="2">
+							<span class="infoname">身份证证件号:</span><span>{{= it.idCard }}</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<span class="infoname">联系人电话:</span><span>{{= it.contPhone }}</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<span class="infoname">联系地址:</span><span>{{= it.address }}</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<span class="infoname">电子邮箱:</span><span>{{= it.contEmail }}</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<span class="infoname">银行开户名:</span><span>{{= it.bankUser }}</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<span class="infoname">开户银行:</span><span>{{= it.bankName }}</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<span class="infoname">开户网点:</span><span>{{= it.bankSite }}</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<span class="infoname">银行账户:</span><span>{{= it.bankCard }}</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</script>
+		<script id="template_zhuanli" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div style="font-size: 18px;border-bottom: 1px solid #ccc;padding: 10px;font-weight: bold;">专利转让信息</div>
+				<div class="main-table-body">
+					<div style="padding: 15px;">
+						<ul>
+							<li class="select_result01"></li>
+							<li>
+								<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+									<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</script>
+		<script id="template_xuqiu" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div style="font-size: 18px;border-bottom: 1px solid #ccc;padding: 10px;font-weight: bold;">专利需求信息</div>
+				<div class="main-table-body">
+					<div style="padding: 15px;">
+						<ul>
+							<li class="select_result02"></li>
+							<li>
+								<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+									<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</script>
+		<script id="template_buy" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div style="font-size: 18px;border-bottom: 1px solid #ccc;padding: 10px;font-weight: bold;">购买信息</div>
+				<div class="main-table-body">
+					<div style="padding: 15px;">
+						<ul>
+							<li class="select_result03"></li>
+							<li>
+								<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+									<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<script id="template_order" type="text/x-dot-template">
+			<div class="main-acticle-body">
+				<div style="font-size: 18px;border-bottom: 1px solid #ccc;padding: 10px;font-weight: bold;">仪器信息</div>
+				<div class="main-table-body">
+					<div style="padding: 15px;">
+						<ul>
+							<li class="select_result04"></li>
+							<li>
+								<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+									<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<script src="js/jquery-3.2.0.min.js"></script>
+		<script src="js/doT.js"></script>
+		<script src="js/comment.js"></script>
+		<script src="js/gerenzhongxin.js"></script>
+	</body>
+</html>

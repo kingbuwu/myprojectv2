@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>知识产权服务</title>
+    <link rel="stylesheet" type="text/css" href="css/top.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-login-top">
+            <!-- <a  style="float: left;">个人中心</a> -->
+            <a href="./registerpage1.html">注册</a>
+            <a id="mainLogina" href="javascript:showLoginBox();">登录</a>
+        </div>
+        <div class="main-login-top-two"></div>
+        <div class="main-top">
+            <div><img src="img/top.png" alt="竞争力" /></div>
+        </div>
+        <div class="main-title">
+            <ul>
+                <li class="active" onclick="goToUrl('index')">首页</li>
+                <li onclick="goToUrl('xinwendongtai')">新闻动态</li>
+                <li onclick="goToUrl('zhengcefagui')">政策法规</li>
+                <li onclick="goToUrl('yuanqufengcai')">园区风采</li>
+                <li onclick="goToUrl('pagelist')">知识产权服务</li>
+                <li onclick="goToUrl('guojihezuo')">国际合作</li>
+                <li onclick="goToUrl('zhonghefuwu')">综合服务</li>
+                <li onclick="goToUrl('lianxiwomen')">联系我们</li>
+            </ul>
+        </div>
+        <div class="main-body">
+            <div class="main-sub-body" style="margin-top: 0; padding-top: 20px; margin: 0 5px;">
+                <div>
+                    <div class="clear">
+                        <div class="main-acticle-body fl" style="width:38.5%;margin-right: .5%;">
+                            <div style="border-radius: 3px;position: relative;">
+                                <div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">新闻图片</div>
+                                <div class="acticle-sub-title-more">更多</div>
+                                <div style="position: absolute; bottom: 0;background-color: #7cbfff; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef; border-radius: 15%; z-index: -1;"></div>
+                            </div>
+                            <div class="main-acticle-text">
+                                <ul class="picsarr">
+                                    <li class="active"><img src="img/news1.png" alt="" style="width: 100%;height: 160px;" /></li>
+                                    <li><img src="img/news2.png" alt="" style="width: 100%;height: 160px;" /></li>
+                                    <li><img src="img/news3.png" alt="" style="width: 100%;height: 160px;" /></li>
+                                    <li><img src="img/news4.png" alt="" style="width: 100%;height: 160px;" /></li>
+                                    <div style="position: absolute;bottom: 0;left: 0;width: 100%;height: 25px;background-color: #313131;opacity: .7;"></div>
+                                    <div class="clear" style="position: absolute;bottom: 0;left: 0;width: 100%;height: 25px;line-height: 25px;">
+                                        <span style="color: white;padding-left: 5px;" id="pictit">副市长王翔调研空港示范区项目0</span>
+                                        <div class="fr">
+                                            <span class="num" data-index="1">1</span>
+                                            <span class="num" data-index="2">2</span>
+                                            <span class="num" data-index="3">3</span>
+                                            <span class="num" data-index="4">4</span>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main-acticle-body fl" style="width:38.5%;margin-right: .5%;">
+                            <div style="border-radius: 3px;position: relative;">
+                                <div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">新闻动态</div>
+                                <div class="acticle-sub-title-more">更多</div>
+                                <div style="position: absolute; bottom: 0;background-color: #7cbfff; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef; border-radius: 15%; z-index: -1;"></div>
+                            </div>
+                            <div class="main-acticle-text" id="newsTable">
+                                <ul>
+                                    <li>
+                                        <div class="text">开发区地下管线普查工作动员会</div>
+                                        <div class="time">(2017-3-14)</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">开发区地下管线普查工作动员会</div>
+                                        <div class="time">(2017-3-14)</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">开发区地下管线普查工作动员会</div>
+                                        <div class="time">(2017-3-14)</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">开发区地下管线普查工作动员会</div>
+                                        <div class="time">(2017-3-14)</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">开发区地下管线普查工作动员会</div>
+                                        <div class="time">(2017-3-14)</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">开发区地下管线普查工作动员会</div>
+                                        <div class="time">(2017-3-14)</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main-acticle-body fl" style="width:21%;border: 1px solid #ccc;">
+                            <div style="background: linear-gradient(to right top, #b5dbff, #036ed8); padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">通知公告</div>
+                            <div id="trainNews" style="color: #3e92e5;padding: 8px; font-size: 12px;">
+                                <p style="margin-bottom: 20px;">·东营技术开发区城市管理机关</p>
+                                <p style="margin-bottom: 20px;">·开发区环保局关于火电行业申领新</p>
+                                <p>·关于落实清理规范一批行政事业性</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <div class="main-acticle-body fl" style="width:38.5%;margin-right: .5%;">
+                            <div style="border-radius: 3px;position: relative;">
+                                <div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">基础知识</div>
+                                <div class="acticle-sub-title-more">更多</div>
+                                <div style="position: absolute; bottom: 0;background-color: #7cbfff; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef; border-radius: 15%; z-index: -1;"></div>
+                            </div>
+                            <div class="main-acticle-text" id="knowNews">
+                                <ul>
+                                    <li>
+                                        <div class="text">国家知识产权局传达学习国务院第五次廉政工作会议</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">国家知识产权局传达学习国务院第五次廉政工作会议</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">国家知识产权局传达学习国务院第五次廉政工作会议</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">国家知识产权局传达学习国务院第五次廉政工作会议</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">国家知识产权局传达学习国务院第五次廉政工作会议</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">国家知识产权局传达学习国务院第五次廉政工作会议</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main-acticle-body fl" style="width:38.5%;margin-right: .5%;">
+                            <div style="border-radius: 3px;position: relative;">
+                                <div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">创意挖掘</div>
+                                <div class="acticle-sub-title-more">更多</div>
+                                <div style="position: absolute; bottom: 0;background-color: #7cbfff; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef; border-radius: 15%; z-index: -1;"></div>
+                            </div>
+                            <div class="main-acticle-text">
+                                <ul id="oriNews">
+                                    <li>
+                                        <div class="text">山西局开展省市区联合专利行政执法检查</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">山西局开展省市区联合专利行政执法检查</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">山西局开展省市区联合专利行政执法检查</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">山西局开展省市区联合专利行政执法检查</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">山西局开展省市区联合专利行政执法检查</div>
+                                    </li>
+                                    <li>
+                                        <div class="text">山西局开展省市区联合专利行政执法检查</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main-acticle-body fl" style="width:20%;border: 0;">
+                            <div class="main-acticle-text">
+                                <div style="text-align: center;">
+                                    <a href="./patent_toushu.html">
+                                        <div style="background: linear-gradient(to bottom, #f7a000, #e46d00);display: inline-block;color: white;padding: 26px;font-size: 16px;font-weight: bold;border-radius: 5px;cursor: pointer;margin-bottom: 20px;">专利侵权举报</div>
+                                    </a>
+                                    <a href="./patent_toushu.html">
+                                        <div style="background: linear-gradient(to bottom, #f7a000, #e46d00);display: inline-block;color: white;padding: 26px;font-size: 16px;font-weight: bold;border-radius: 5px;cursor: pointer;">
+                                            产品假冒举报</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-acticle-body" style="display: flex;justify-content: space-between;border: 0;">
+                        <img src="img/subimg001.png" alt="" style="height: 93px;" />
+                        <img src="img/subimg002.png" alt="" style="height: 93px;" />
+                        <img src="img/subimg003.png" alt="" style="height: 93px;" />
+                    </div>
+                    <div>
+                        <div class="main-acticle-body">
+                            <div style="border-radius: 3px;position: relative;">
+                                <div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">园区产品</div>
+                                <div class="acticle-sub-title-more">更多</div>
+                                <div style="position: absolute; bottom: 0;background-color: #7cbfff; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef; border-radius: 15%; z-index: -1;"></div>
+                            </div>
+                            <div class="main-acticle-text">
+                                <ul id="propertyNews" style="padding-top: 10px;" >
+                                    <li  style="border: 1px solid #5aa0e3;padding: 10px;margin-bottom: 10px;" class="clear">
+                                        <div class="fl" style="margin-right: 10px;"><img src="img/subimg003.png" alt="" style="width: 120px;height: 80px;" /></div>
+                                        <div class="clear">
+                                            <div class="fl" style="width: 50%;">
+                                                <h3>聚乙烯</h3>
+                                                <p style="padding: 10px 0;line-height: 24px;overflow-y: auto;">知识产权服务知识产权服务知识产权服务知识产服务知识产权服务知识产权服权服务</p>
+                                            </div>
+                                            <div class="fr" style="width: 30%;padding-top: 10px;">
+                                                <p style="line-height: 20px; color: #7cb256;">电子邮箱:1234@sfasdf.com</p>
+                                                <p style="line-height: 20px; color: #7cb256;">联系电话:123412341234</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li style="border: 1px solid #5aa0e3;padding: 10px;margin-bottom: 10px;" class="clear">
+                                        <div class="fl" style="margin-right: 10px;"><img src="img/subimg003.png" alt="" style="width: 120px;height: 80px;" /></div>
+                                        <div class="clear">
+                                            <div class="fl" style="width: 50%;">
+                                                <h3>聚乙烯</h3>
+                                                <p style="padding: 10px 0;line-height: 24px;overflow-y: auto;">知识产权服务知识产权服务知识产权服务知识产服务知识产权服务知识产权服权服务</p>
+                                            </div>
+                                            <div class="fr" style="width: 30%;padding-top: 10px;">
+                                                <p style="line-height: 20px; color: #7cb256;">电子邮箱:1234@sfasdf.com</p>
+                                                <p style="line-height: 20px; color: #7cb256;">联系电话:123412341234</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li style="border: 1px solid #5aa0e3;padding: 10px;margin-bottom: 10px;" class="clear">
+                                        <div class="fl" style="margin-right: 10px;"><img src="img/subimg003.png" alt="" style="width: 120px;height: 80px;" /></div>
+                                        <div class="clear">
+                                            <div class="fl" style="width: 50%;">
+                                                <h3>聚乙烯</h3>
+                                                <p style="padding: 10px 0;line-height: 24px;overflow-y: auto;">知识产权服务知识产权服务知识产权服务知识产服务知识产权服务知识产权服权服务</p>
+                                            </div>
+                                            <div class="fr" style="width: 30%;padding-top: 10px;">
+                                                <p style="line-height: 20px; color: #7cb256;">电子邮箱:1234@sfasdf.com</p>
+                                                <p style="line-height: 20px; color: #7cb256;">联系电话:123412341234</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main-acticle-body">
+                            <div style="border-radius: 3px;position: relative;">
+                                <div style="background: linear-gradient(to right top, #b5dbff, #036ed8); display: inline-block; padding: 8px 20px; border-radius: 3px; color: white; font-weight: bold; font-size: 12px;">专家风采</div>
+                                <div class="acticle-sub-title-more">更多</div>
+                                <div style="position: absolute; bottom: 0;background-color: #7cbfff; width: 100%; border-top: 1px solid #3b96ef; border-bottom: 1px solid #3b96ef; border-radius: 15%; z-index: -1;"></div>
+                            </div>
+                            <div class="main-acticle-text">
+                                <div id="expertNews" style="padding: 10px 0;margin-left: 16px;" class="clear">
+                                    <div  style="text-align: center;width: 20%;float: left;padding: 10px 1%;margin: 0 1%;border: 1px solid #7cb256;border-radius: 5px;font-size: 13px;border-top: 5px solid #7cb256;">
+                                        <img src="img/touxiang.png" alt="" style="border-radius: 50%;width: 120px;height: 120px;" />
+                                        <p style="color: #7cb256;margin: 2px 0;">小马</p>
+                                        <p style="color: #7cb256;margin: 2px 0;">博士</p>
+                                        <p style="color: #7cb256;margin: 2px 0;">经济学院副院长</p>
+                                        <p style="margin: 2px 0;">产业经济学，行为经济学</p>
+                                        <p style="margin: 2px 0;">中国生产力学会理事</p>
+                                    </div>
+                                    <div style="text-align: center;width: 20%;float: left;padding: 10px 1%;margin: 0 1%;border: 1px solid #7cb256;border-radius: 5px;font-size: 13px;border-top: 5px solid #7cb256;">
+                                        <img src="img/touxiang.png" alt="" style="border-radius: 50%;width: 120px;height: 120px;" />
+                                        <p style="color: #7cb256;margin: 2px 0;">小马</p>
+                                        <p style="color: #7cb256;margin: 2px 0;">博士</p>
+                                        <p style="color: #7cb256;margin: 2px 0;">经济学院副院长</p>
+                                        <p style="margin: 2px 0;">产业经济学，行为经济学</p>
+                                        <p style="margin: 2px 0;">中国生产力学会理事</p>
+                                    </div>
+                                    <div style="text-align: center;width: 20%;float: left;padding: 10px 1%;margin: 0 1%;border: 1px solid #7cb256;border-radius: 5px;font-size: 13px;border-top: 5px solid #7cb256;">
+                                        <img src="img/touxiang.png" alt="" style="border-radius: 50%;width: 120px;height: 120px;" />
+                                        <p style="color: #7cb256;margin: 2px 0;">小马</p>
+                                        <p style="color: #7cb256;margin: 2px 0;">博士</p>
+                                        <p style="color: #7cb256;margin: 2px 0;">经济学院副院长</p>
+                                        <p style="margin: 2px 0;">产业经济学，行为经济学</p>
+                                        <p style="margin: 2px 0;">中国生产力学会理事</p>
+                                    </div>
+                                    <div style="text-align: center;width: 20%;float: left;padding: 10px 1%;margin: 0 1%;border: 1px solid #7cb256;border-radius: 5px;font-size: 13px;border-top: 5px solid #7cb256;">
+                                        <img src="img/touxiang.png" alt="" style="border-radius: 50%;width: 120px;height: 120px;" />
+                                        <p style="color: #7cb256;margin: 2px 0;">小马</p>
+                                        <p style="color: #7cb256;margin: 2px 0;">博士</p>
+                                        <p style="color: #7cb256;margin: 2px 0;">经济学院副院长</p>
+                                        <p style="margin: 2px 0;">产业经济学，行为经济学</p>
+                                        <p style="margin: 2px 0;">中国生产力学会理事</p>
+                                        <div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.0.min.js"></script>
+   <!--  <script language="javascript" src="http://api.pop800.com/800.js?n=269414&s=01&p=l&l=cn"></script><div style="display:none;"><a href="http://www.pop800.com">在线客服</a></div> -->
+    <script src="js/doT.js"></script>
+    <script src="js/comment.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

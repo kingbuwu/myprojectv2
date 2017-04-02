@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>联系我们</title>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/pagelist.css"/>
+		<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+		<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui-append.css" rel="stylesheet">
+		<style>
+            .acticle-sub-title-txt{
+                background-color: #6da941;
+                font-size: 16px;
+            }
+            .acticle-sub-titleline{
+                position: absolute;
+                bottom: -1px;
+                height: 1px;
+                background-color: #6da941;
+                width: 100%;
+                border-top: 1px solid #6da941;
+                border-bottom: 1px solid #6da941;
+            }
+            .acticle-list-title:after,.acticle-list-top:after{
+                display: block;
+                content: "";
+                clear: both;
+            }
+            .acticle-list-top .list-block{
+                float: left;
+                padding: 30px 0;
+            }
+            .list-block span{
+                width: 100px;
+                text-align: center;
+                display: inline-block;
+            }
+            .list-block .list-little-block{
+                padding: 15px 0;
+            }
+            .list-block input{
+				width: 80px;
+			    border: 1px solid #ccc;
+			    margin-left: 10px;
+			    height: 24px;
+			    line-height: 24px;
+			    text-indent: 5px;
+            }
+            .acticle-list-table{
+                padding: 0 20px 20px;
+            }
+            .acticle-list-table .list-info{
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .acticle-list-table .list-info th,.acticle-list-table .list-info td{
+                text-align: center;
+                border: 1px solid #ccc;
+                padding: 8px 5px;
+                font-size: 12px;
+            }
+			.modal-info-table{
+				width: 100%;
+				border-collapse: collapse;
+			}
+			.modal-info-table td{
+				padding: 10px 40px;
+				border:1px solid #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main-login-top">
+	            <!-- <a  style="float: left;">个人中心</a> -->
+	            <a href="./registerpage1.html">注册</a>
+	            <a id="mainLogina" href="javascript:showLoginBox();">登录</a>
+	        </div>
+	        <div class="main-login-top-two"></div>
+	        <div class="main-top">
+	            <div><img src="img/top.png" alt="竞争力" /></div>
+	        </div>
+			<div class="main-title">
+				<ul>
+					<li onclick="goToUrl('index')">首页</li>
+					<li onclick="goToUrl('xinwendongtai')">新闻动态</li>
+					<li onclick="goToUrl('zhengcefagui')">政策法规</li>
+					<li onclick="goToUrl('yuanqufengcai')">园区风采</li>
+					<li onclick="goToUrl('pagelist')">知识产权服务</li>
+					<li onclick="goToUrl('guojihezuo')">国际合作</li>
+					<li class="active" onclick="goToUrl('zhonghefuwu')">综合服务</li>
+					<li onclick="goToUrl('lianxiwomen')">联系我们</li>
+				</ul>
+			</div>
+			<div class="main-body">
+				<div class="main-sub-title">
+					<i class="icon icon-addr"></i>
+					<span>当前位置:</span>
+					<span class="main-sub-addr">首页</span>
+					<span class="main-sub-addr">园区风采</span>
+					<span class="main-sub-addr">仪器服务共享平台</span>
+				</div>
+				<div class="main-sub-body">
+					<div class="main-acticle" style="border:1px solid #378cdd;">
+                        <div class="acticle-list-title" style="position:relative;">
+                            <div class="acticle-sub-title-txt">仪器共享服务平台</div>
+                            <div class="acticle-sub-titleline"></div>
+                        </div>
+                        <div class="acticle-list-top">
+                            <div class="list-block">
+                                <div class="list-little-block"><span>仪器名称</span><input id="yq_name" type="text"></div>
+                                <div class="list-little-block"><span>所属单位</span><input id="yq_organization" type="text"></div>
+                            </div>
+                            <div class="list-block">
+                                <div class="list-little-block"><span>型号</span><input id="yq_model" type="text"></div>
+                                <div class="list-little-block"><span>制造商名称</span><input id="yq_manufacturer" type="text"></div>
+                            </div>
+                            <div class="list-block">
+                                <div class="list-little-block"><span>类型</span><input id="yq_type" type="text"></div>
+                                <div class="list-little-block"><span>制造商国别</span><input id="yq_country" type="text"></div>
+                            </div>
+                            <div class="list-block">
+                                <div style="width: 80px; height: 24px; line-height: 24px; text-align: center; color: white; background: linear-gradient(to bottom, #036ed8, #62b2ff); margin: 40px 30px; padding: 4px;cursor: pointer;" onclick='showYqList(1);'>查询</div>
+                            </div>
+                        </div>
+                        <div class="acticle-list-table">
+                            <table class="reset-table list-info" border="0"></table>
+                			<div class="page-bar" unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">
+                				<ul unselectable="on" onselectstart="return false;" style="-moz-user-select:none;"></ul>
+                			</div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 预约时间 Modal-->
+		<div id="orderModal" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade" style="border: 0;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body" style="padding: 0;">
+						<div style="background-color: #6da941; color: white; font-size: 15px; padding: 8px 16px;">预约仪器</div>
+						<div style="padding: 20px;">
+							<form class="sui-form form-horizontal" style="margin:0;">
+								<div class="control-group input-daterange" style="margin:0;">
+									<label class="control-label" style="text-align:center;">预约时间:</label>
+									<div class="controls">
+										<input type="text" class="input-medium input-date" style="width:120px;"><span>-</span>
+										<input type="text" class="input-medium input-date" style="width:120px;">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="sui-btn btn-primary btn-large doOrder" onclick="doOrder()">确定</button>
+						<button type="button" data-dismiss="modal" class="sui-btn btn-default btn-large">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 仪器展示 Modal-->
+		<div id="showInfoModal" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade" style="border: 0;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body" style="padding: 0;"></div>
+				</div>
+			</div>
+		</div>
+
+		<!--下面是所有的doT模板 author@ctj -->
+		<!--gjhz 国际合作-->
+		<script id="template_InfoModal" type="text/x-dot-template">
+		{{console.log(it);}}
+			<div style="background-color: #6da941; color: white; font-size: 15px; padding: 8px 16px;">仪器设备信息</div>
+			<div style="padding: 20px;border:1px solid #ccc;">
+				<table class="modal-info-table">
+					<tr>
+						<td colspan="2" rowspan="6"><img src="{{= it.image }}" alt="" style="width: 100%; height: 200px;"></td>
+						<td>仪器名称</td>
+						<td>{{= it.name }}</td>
+					</tr>
+					<tr>
+						<td>仪器型号</td>
+						<td>{{= it.model }}</td>
+					</tr>
+					<tr>
+						<td>所属分类</td>
+						<td>{{= it.type }}</td>
+					</tr>
+					<tr>
+						<td>所属单位</td>
+						<td>{{= it.organization }}</td>
+					</tr>
+					<tr>
+						<td>制造商名称</td>
+						<td>{{= it.manufacturer }}</td>
+					</tr>
+					<tr>
+						<td>制造商国别</td>
+						<td>{{= it.country }}</td>
+					</tr>
+					<tr>
+						<td>购置时间</td>
+						<td>{{= it.buyTime }}</td>
+						<td>放置地点</td>
+						<td>{{= it.place }}</td>
+					</tr>
+					<tr>
+						<td>对外服务价格</td>
+						<td>{{= it.price.toFixed(2) }}元</td>
+						<td>仪器工作状态</td>
+						<td>{{= it.statusName }}</td>
+					</tr>
+					<tr>
+						<td>仪器功能及描述</td>
+						<td colspan="3">{{= it.functionDescr }}</td>
+					</tr>
+				</table>
+			</div>
+		</script>
+
+		<script src="js/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.js"></script>
+		<script src="js/doT.js"></script>
+		<script src="js/comment.js"></script>
+		<script src="js/yqgxfwpt.js"></script>
+	</body>
+</html>

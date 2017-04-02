@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>知识产权服务</title>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<style type="text/css">
+			.main-acticle-body {
+			    position: relative;
+			    border-radius: 2px;
+			    border: 1px solid #5ca1e3;
+			    margin-bottom: 20px;
+			}
+			.main-table-body table {
+			    width: 100%;
+			    border-collapse: collapse;
+			}
+			.main-table-body td{
+				text-align: left;
+				line-height: 24px;
+				padding: 8px 5px;
+				border: 1px solid #e2e2e2;
+				font-size: 14px;
+    			color: #6f6f6f;
+    			font-weight: bold;
+			}
+			.main-table-body tr td:first-child{
+				text-align: right;
+				width: 100px;
+    			padding-right: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="main-login-top">
+	            <!-- <a  style="float: left;">个人中心</a> -->
+	            <a href="./registerpage1.html">注册</a>
+	            <a id="mainLogina" href="javascript:showLoginBox();">登录</a>
+	        </div>
+	        <div class="main-login-top-two"></div>
+	        <div class="main-top">
+	            <div><img src="img/top.png" alt="竞争力" /></div>
+	        </div>
+			<div class="main-title">
+				<ul>
+	                <li onclick="goToUrl('index')">首页</li>
+	                <li onclick="goToUrl('xinwendongtai')">新闻动态</li>
+	                <li onclick="goToUrl('zhengcefagui')">政策法规</li>
+	                <li onclick="goToUrl('yuanqufengcai')">园区风采</li>
+	                <li class="active" onclick="goToUrl('pagelist')">知识产权服务</li>
+	                <li onclick="goToUrl('guojihezuo')">国际合作</li>
+	                <li onclick="goToUrl('zhonghefuwu')">综合服务</li>
+	                <li onclick="goToUrl('lianxiwomen')">联系我们</li>
+				</ul>
+			</div>
+			<div class="main-body">
+				<div class="main-sub-title">
+					<i class="icon icon-addr"></i>
+					<span>当前位置:</span>
+					<span class="main-sub-addr">首页</span>
+					<span class="main-sub-addr">知识产权服务</span>
+					<span class="main-sub-addr">成果展示与交易</span>
+					<span class="main-sub-addr">专利转让</span>
+				</div>
+				<div class="main-sub-body">
+					<div class="main-acticle-body" style="margin-top: 40px;">
+						<div style="padding: 8px 16px; color: white; font-size: 16px; border-radius: 5px; position: absolute;top: -20px;left: 10px;background: -webkit-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -o-linear-gradient(to bottom, #036ed8, #62b2ff ); background: -moz-linear-gradient(to bottom, #036ed8, #62b2ff ); background: linear-gradient(to bottom, #036ed8, #62b2ff );">专利转让信息</div>
+						<div class="main-table-body">
+							<div style="height: 20px;background-color: #bfe3fd;"></div>
+							<div style="padding: 15px;" id="zl_table"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--zltswq 专利投诉维权模板-->
+		<script id="template_zltable" type="text/x-dot-template">
+			<table>
+				<tr><td style="width: 120px;">专利名称:</td><td colspan="3">{{= it.patentName }}</td></tr>
+				<tr><td>专利号:</td><td>{{= it.patentNo }}</td><td>专利权人:</td><td>{{= it.owner }}</td></tr>
+				<tr><td>联系人:</td><td>{{= it.prName }}</td><td>联系电话:</td><td>{{= it.prPhone }}</td></tr>
+				<tr><td>手机:</td><td>{{= it.prPhone }}</td><td>合作方式:</td><td>{{= it.coopTypeName }}</td></tr>
+				<tr><td>专利授权日:</td><td>{{= it.authTime }}</td><td>法律状态:</td><td>{{= it.legalStatus }}</td></tr>
+				<tr><td>技术报价:</td><td>{{= it.price }}</td><td>图片</td><td></td></tr>
+				<tr><td>项目领域:</td><td colspan="3"></td></tr>
+				<tr><td>专利类别:</td><td>{{= it.typeName }}</td><td>出让金额:</td><td>{{= it.salePrice }}(万元)</td></tr>
+				<tr><td>合作方式:</td><td>{{= it.coopTypeName }}</td><td>技术先进性:</td><td>{{= it.advancementName }}</td></tr>
+				<tr><td>产业化所需时间与投资规模:</td><td colspan="3">{{= it.industCost }}</td></tr>
+				<tr><td>技术特点及优势分析:</td><td colspan="3">{{= it.chara }}</td></tr>
+				<tr><td>市场前景:</td><td colspan="3">{{= it.prospect }}</td></tr>
+				<tr><td>同类技术的竞争分析:</td><td colspan="3">{{= it.compAssay }}</td></tr>
+				<tr><td>经济效益与社会效益分析:</td><td colspan="3">{{= it.econSocAssay }}</td></tr>
+			</table>
+			<div class="unselectable" style="width: 120px; height: 40px; line-height: 40px; background-color: #4da7fd; color: white; text-align: center; margin: 24px auto 6px; font-size: 20px; font-weight: bold; border-radius: 10px; cursor: pointer;" onclick="history.back();">关闭</div>
+		</script>
+
+		<script src="js/jquery-3.2.0.min.js"></script>
+		<script src="js/doT.js"></script>
+		<script src="js/comment.js"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				var id = GetQueryString('id');
+				if(!isEmpty(id)){
+					loadDetail(id);
+				}else{
+					console.log('缺少参数id');
+				}
+			}
+			function loadDetail(id){
+				requestData(function(res){
+					if(res.success == true){
+						var data = res.data;
+						fn = doT.template($("#template_zltable").html());
+						$("#zl_table").html(fn(data));
+					}else{
+						$("#zl_table").html('<div>未找到该专利信息</div>');
+					}
+				},{
+					id:id
+				},urlA+"patentInfo")
+			}
+		</script>
+	</body>
+</html>
